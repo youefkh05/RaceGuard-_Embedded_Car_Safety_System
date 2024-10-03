@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <project>                                  
-  <executable name="Task1_source_code.elf">                 
+  <executable name="MCU1_CODE.elf">                 
     <memory name="program">              
       <units>bytes</units>                 
       <length>32768</length>                 
-      <used>3878</used>                     
-      <free>28890</free>                     
+      <used>5836</used>                     
+      <free>26932</free>                     
     </memory>                              
     <memory name="data">                 
       <units>bytes</units>                 
       <length>2048</length>                 
-      <used>14</used>                     
-      <free>2034</free>                     
+      <used>1605</used>                     
+      <free>443</free>                     
     </memory>                              
   </executable>                            
 </project>                                 

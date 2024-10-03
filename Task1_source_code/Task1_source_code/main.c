@@ -19,11 +19,30 @@ volatile uint8_t temp_counter=0;
 volatile temp temperature=0;
 uint8_t Speed_Scale=250;
 
+xSemaphoreHandle LED_Semaphore;
+xSemaphoreHandle LCD_Semaphore;
+xSemaphoreHandle S7_Semaphore;//J
+xSemaphoreHandle xMutex;
+TaskHandle_t xHanleLED1;
+TaskHandle_t xHanleLED2;
+TaskHandle_t xHanleLED3;
+TaskHandle_t xHanleLED4;
+TaskHandle_t xHanlebot1;
+TaskHandle_t xHanlepot1;
+TaskHandle_t xHanleS7;
+TaskHandle_t xHanleLCD;
+TaskHandle_t xHanleTMP;
+
+
 
 
 
 int main(void)
 {	
+	
+	LED_Semaphore=xSemaphoreCreateBinary();
+	LCD_Semaphore=xSemaphoreCreateBinary();
+	
 	/*		Initializations		*/
 	dc_motor DC_fan1=DC_Motor1;
 	DC_Initialize(DC_fan1);
