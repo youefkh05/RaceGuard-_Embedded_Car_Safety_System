@@ -117,6 +117,7 @@
       <Value>../HAL/IO/LED/LED2</Value>
       <Value>../HAL/IO/LED/LED3</Value>
       <Value>../MCAL/WatchDog</Value>
+      <Value>../My_RTOS</Value>
     </ListValues>
   </com.microchip.xc8.compiler.directories.IncludePaths>
   <com.microchip.xc8.compiler.optimization.level>Optimize debugging experience (-Og)</com.microchip.xc8.compiler.optimization.level>
@@ -254,6 +255,12 @@
     <Compile Include="MCAL\WatchDog\WatchDog_Private.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="My_RTOS\My_RTOS.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="My_RTOS\My_RTOS.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="APP\" />
@@ -273,6 +280,7 @@
     <Folder Include="MCAL\Timer0\" />
     <Folder Include="MCAL\UART\" />
     <Folder Include="MCAL\WatchDog\" />
+    <Folder Include="My_RTOS\" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

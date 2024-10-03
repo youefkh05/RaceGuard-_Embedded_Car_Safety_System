@@ -68,59 +68,60 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
       <com.microchip.xc8>
-        <com.microchip.xc8.common.outputfiles.hex>True</com.microchip.xc8.common.outputfiles.hex>
-        <com.microchip.xc8.common.outputfiles.eep>True</com.microchip.xc8.common.outputfiles.eep>
-        <com.microchip.xc8.common.outputfiles.usersignatures>False</com.microchip.xc8.common.outputfiles.usersignatures>
-        <com.microchip.xc8.common.outputfiles.lss>True</com.microchip.xc8.common.outputfiles.lss>
-        <com.microchip.xc8.compiler.general.ChangeDefaultCharTypeUnsigned>True</com.microchip.xc8.compiler.general.ChangeDefaultCharTypeUnsigned>
-        <com.microchip.xc8.compiler.general.ChangeDefaultBitFieldUnsigned>True</com.microchip.xc8.compiler.general.ChangeDefaultBitFieldUnsigned>
-        <com.microchip.xc8.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>(%24DeviceMacro)</Value>
-            <Value>DEBUG</Value>
-          </ListValues>
-        </com.microchip.xc8.compiler.symbols.DefSymbols>
-        <com.microchip.xc8.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>../APP</Value>
-            <Value>../HAL</Value>
-            <Value>../HAL/Configurations</Value>
-            <Value>../HAL/EEPROM</Value>
-            <Value>../HAL/IO</Value>
-            <Value>../HAL/IO/LCD</Value>
-            <Value>../HAL/IO/LED</Value>
-            <Value>../HAL/IO/LED/LED1</Value>
-            <Value>../HAL/IO/LED/LED2</Value>
-            <Value>../HAL/IO/LED/LED3</Value>
-            <Value>../HAL/IO/LED/LED4</Value>
-            <Value>../HAL/IO/LED/LED5</Value>
-            <Value>../HAL/IO/LM35_TMP_Sensor</Value>
-            <Value>../HAL/IO/Motors</Value>
-            <Value>../HAL/IO/Motors/DC</Value>
-            <Value>../HAL/IO/Motors/SERVO</Value>
-            <Value>../MCAL</Value>
-            <Value>../MCAL/ADC</Value>
-            <Value>../MCAL/Configurations</Value>
-            <Value>../MCAL/DIO</Value>
-            <Value>../MCAL/INTERRUPT</Value>
-            <Value>../MCAL/Timer0</Value>
-            <Value>../MCAL/TWI</Value>
-            <Value>../MCAL/UART</Value>
-            <Value>../HAL/IO/Buzzer</Value>
-          </ListValues>
-        </com.microchip.xc8.compiler.directories.IncludePaths>
-        <com.microchip.xc8.compiler.optimization.level>Optimize debugging experience (-Og)</com.microchip.xc8.compiler.optimization.level>
-        <com.microchip.xc8.compiler.optimization.PackStructureMembers>True</com.microchip.xc8.compiler.optimization.PackStructureMembers>
-        <com.microchip.xc8.compiler.optimization.AllocateBytesNeededForEnum>True</com.microchip.xc8.compiler.optimization.AllocateBytesNeededForEnum>
-        <com.microchip.xc8.compiler.optimization.DebugLevel>Default (-g2)</com.microchip.xc8.compiler.optimization.DebugLevel>
-        <com.microchip.xc8.compiler.warnings.AllWarnings>True</com.microchip.xc8.compiler.warnings.AllWarnings>
-        <com.microchip.xc8.linker.libraries.Libraries>
-          <ListValues>
-            <Value>libm</Value>
-          </ListValues>
-        </com.microchip.xc8.linker.libraries.Libraries>
-        <com.microchip.xc8.assembler.debugging.DebugLevel>Default (-Wa,-g)</com.microchip.xc8.assembler.debugging.DebugLevel>
-      </com.microchip.xc8>
+  <com.microchip.xc8.common.outputfiles.hex>True</com.microchip.xc8.common.outputfiles.hex>
+  <com.microchip.xc8.common.outputfiles.eep>True</com.microchip.xc8.common.outputfiles.eep>
+  <com.microchip.xc8.common.outputfiles.usersignatures>False</com.microchip.xc8.common.outputfiles.usersignatures>
+  <com.microchip.xc8.common.outputfiles.lss>True</com.microchip.xc8.common.outputfiles.lss>
+  <com.microchip.xc8.compiler.general.ChangeDefaultCharTypeUnsigned>True</com.microchip.xc8.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <com.microchip.xc8.compiler.general.ChangeDefaultBitFieldUnsigned>True</com.microchip.xc8.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <com.microchip.xc8.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>(%24DeviceMacro)</Value>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </com.microchip.xc8.compiler.symbols.DefSymbols>
+  <com.microchip.xc8.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../APP</Value>
+      <Value>../HAL</Value>
+      <Value>../HAL/Configurations</Value>
+      <Value>../HAL/EEPROM</Value>
+      <Value>../HAL/IO</Value>
+      <Value>../HAL/IO/LCD</Value>
+      <Value>../HAL/IO/LED</Value>
+      <Value>../HAL/IO/LED/LED1</Value>
+      <Value>../HAL/IO/LED/LED2</Value>
+      <Value>../HAL/IO/LED/LED3</Value>
+      <Value>../HAL/IO/LED/LED4</Value>
+      <Value>../HAL/IO/LED/LED5</Value>
+      <Value>../HAL/IO/LM35_TMP_Sensor</Value>
+      <Value>../HAL/IO/Motors</Value>
+      <Value>../HAL/IO/Motors/DC</Value>
+      <Value>../HAL/IO/Motors/SERVO</Value>
+      <Value>../MCAL</Value>
+      <Value>../MCAL/ADC</Value>
+      <Value>../MCAL/Configurations</Value>
+      <Value>../MCAL/DIO</Value>
+      <Value>../MCAL/INTERRUPT</Value>
+      <Value>../MCAL/Timer0</Value>
+      <Value>../MCAL/TWI</Value>
+      <Value>../MCAL/UART</Value>
+      <Value>../HAL/IO/Buzzer</Value>
+      <Value>../My_RTOS</Value>
+    </ListValues>
+  </com.microchip.xc8.compiler.directories.IncludePaths>
+  <com.microchip.xc8.compiler.optimization.level>Optimize debugging experience (-Og)</com.microchip.xc8.compiler.optimization.level>
+  <com.microchip.xc8.compiler.optimization.PackStructureMembers>True</com.microchip.xc8.compiler.optimization.PackStructureMembers>
+  <com.microchip.xc8.compiler.optimization.AllocateBytesNeededForEnum>True</com.microchip.xc8.compiler.optimization.AllocateBytesNeededForEnum>
+  <com.microchip.xc8.compiler.optimization.DebugLevel>Default (-g2)</com.microchip.xc8.compiler.optimization.DebugLevel>
+  <com.microchip.xc8.compiler.warnings.AllWarnings>True</com.microchip.xc8.compiler.warnings.AllWarnings>
+  <com.microchip.xc8.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </com.microchip.xc8.linker.libraries.Libraries>
+  <com.microchip.xc8.assembler.debugging.DebugLevel>Default (-Wa,-g)</com.microchip.xc8.assembler.debugging.DebugLevel>
+</com.microchip.xc8>
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
@@ -325,6 +326,12 @@
     <Compile Include="MCAL\UART\UART_Private.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="My_RTOS\My_RTOS.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="My_RTOS\My_RTOS.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="APP\" />
@@ -352,6 +359,7 @@
     <Folder Include="MCAL\Timer0\" />
     <Folder Include="MCAL\TWI\" />
     <Folder Include="MCAL\UART\" />
+    <Folder Include="My_RTOS\" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>
