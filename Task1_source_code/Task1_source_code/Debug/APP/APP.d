@@ -25,7 +25,6 @@ APP/APP.d APP/APP.o: ../APP/APP.c ../APP/APP.h \
  ../MCAL/INTERRUPT/Interrupt_Private.h \
  ../MCAL/INTERRUPT/Interrupts_Configuration.h ../MCAL/ADC/ADC_Private.h \
  ../MCAL/ADC/ADC_Configuration.h ../MCAL/ADC/ADC_Address.h \
- ../MCAL/Timer0/Timer0_Private.h ../MCAL/Timer0/Timer0_Configuration.h \
  ../MCAL/UART/UART_Private.h ../MCAL/UART/UART_Configurations.h \
  ../MCAL/WatchDog/WatchDog_Private.h \
  ../HAL/Configurations/MODULE_LIBRARY.h ../HAL/IO/LED/LED1/LED1_Private.h \
@@ -100,10 +99,6 @@ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\math.h:
 ../MCAL/ADC/ADC_Configuration.h:
 
 ../MCAL/ADC/ADC_Address.h:
-
-../MCAL/Timer0/Timer0_Private.h:
-
-../MCAL/Timer0/Timer0_Configuration.h:
 
 ../MCAL/UART/UART_Private.h:
 

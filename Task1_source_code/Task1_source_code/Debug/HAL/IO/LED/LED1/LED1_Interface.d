@@ -27,7 +27,6 @@ HAL/IO/LED/LED1/LED1_Interface.d HAL/IO/LED/LED1/LED1_Interface.o: \
  ../MCAL/INTERRUPT/Interrupt_Private.h \
  ../MCAL/INTERRUPT/Interrupts_Configuration.h ../MCAL/ADC/ADC_Private.h \
  ../MCAL/ADC/ADC_Configuration.h ../MCAL/ADC/ADC_Address.h \
- ../MCAL/Timer0/Timer0_Private.h ../MCAL/Timer0/Timer0_Configuration.h \
  ../MCAL/UART/UART_Private.h ../MCAL/UART/UART_Configurations.h \
  ../MCAL/WatchDog/WatchDog_Private.h
 
@@ -92,10 +91,6 @@ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\math.h:
 ../MCAL/ADC/ADC_Configuration.h:
 
 ../MCAL/ADC/ADC_Address.h:
-
-../MCAL/Timer0/Timer0_Private.h:
-
-../MCAL/Timer0/Timer0_Configuration.h:
 
 ../MCAL/UART/UART_Private.h:
 

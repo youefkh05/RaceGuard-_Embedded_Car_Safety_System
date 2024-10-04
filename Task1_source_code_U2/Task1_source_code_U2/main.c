@@ -13,8 +13,25 @@ uint16_t UART_Rdata=0;
 volatile E2PROM_State currentState =Normal_state;
 uint16_t speed=0;
 
+xSemaphoreHandle LED_Semaphore;
+xSemaphoreHandle LCD_Semaphore;
+xSemaphoreHandle S7_Semaphore;//J
+xSemaphoreHandle xMutex;
+TaskHandle_t xHanleLED1;
+TaskHandle_t xHanleLED2;
+TaskHandle_t xHanleLED3;
+TaskHandle_t xHanleLED4;
+TaskHandle_t xHanlebot1;
+TaskHandle_t xHanlepot1;
+TaskHandle_t xHanleS7;
+TaskHandle_t xHanleLCD;
+TaskHandle_t xHanleTMP;
+
 int main(void)
 {	
+	LED_Semaphore=xSemaphoreCreateBinary();
+	LCD_Semaphore=xSemaphoreCreateBinary();
+	
 	/*		Initializations		*/
 	
 	dc_motor DC_mach1=DC_Motor1;

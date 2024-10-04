@@ -13,6 +13,13 @@
 #include "MODULE_LIBRARY.h"
 #include "math.h"
 
+typedef enum
+{
+	Normal_state = 0,
+	Emergency_state = 1,
+	Abnormal_state=2
+}E2PROM_State;
+
 
 // BUTTON1
 #define BOT1_PORT	PORTA
@@ -23,16 +30,11 @@
 #define Emergency_Mes			300
 #define	Off_Mes					255
 #define Emergency_counter_max	14
+
 		
 
-
-
-typedef enum
-{
-	Normal_state = 0,
-	Emergency_state = 1,
-	Abnormal_state=2
-}E2PROM_State;
+/* Initialization	*/
+void App_Init(void);
 
 
 /* E2PROM	State	*/

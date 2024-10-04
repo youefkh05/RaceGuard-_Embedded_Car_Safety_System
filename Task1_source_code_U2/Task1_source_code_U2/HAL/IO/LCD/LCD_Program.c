@@ -10,7 +10,7 @@
 //#include "STD_TYPES.h"
 #include "BIT_MATH.h"
 #include "avr/delay.h"
-#include "DIO_Interface.h"
+#include "DIO_Private.h"
 #include "LCD_Interface.h"
 #include "LCD_private.h"
 #include "LCD_Config.h"

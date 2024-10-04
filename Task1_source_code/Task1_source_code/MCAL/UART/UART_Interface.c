@@ -87,8 +87,13 @@ uart_status UART_Initialize_WithoutInterrupt(uart_baudrate baudrate, uart_mode m
 }
 uart_status UART_Transmit_Character(uint8_t data)
 {
+
+	while ((!(UCSRA & (1 << UDRE))) ) {
+		// Wait until the transmit buffer is empty
+	}
+	
 	UDR = data;
-	while (((UCSRA>>TXC)&0x01) != 1);//Wait until flag of transmitting received
+	//while (((UCSRA>>TXC)&0x01) != 1);//Wait until flag of transmitting received
 	return UART_OK;
 }
 

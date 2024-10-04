@@ -8,7 +8,7 @@ HAL\EEPROM\EEPROM_Interface.c
 
 HAL\IO\Buzzer\BUZZER_Interface.c
 
-HAL\IO\LCD\LCD.c
+HAL\IO\LCD\LCD_Program.c
 
 HAL\IO\LED\LED1\LED1_Interface.c
 
@@ -39,4 +39,22 @@ MCAL\Timer0\Timer0_Interface.c
 MCAL\TWI\TWI.c
 
 MCAL\UART\UART_Interface.c
+
+RTOS\SCR\croutine.c
+
+RTOS\SCR\event_groups.c
+
+RTOS\SCR\heap_1.c
+
+RTOS\SCR\integer.c
+
+RTOS\SCR\list.c
+
+RTOS\SCR\PollQ.c
+
+RTOS\SCR\port.c
+
+RTOS\SCR\queue.c
+
+RTOS\SCR\tasks.c
 
