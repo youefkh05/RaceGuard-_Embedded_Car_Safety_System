@@ -12,6 +12,17 @@
 #include "PERIPHERAL_LIBRARY.h"
 #include "MODULE_LIBRARY.h"
 #include "math.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "timers.h"
+#include "semphr.h"
+#include "queue.h"
+#include <stdio.h>
+#include <string.h>
+#include <time.h>
+#include <stdbool.h> // Include the header file for boolean type
+#include <stdlib.h>
+#include "event_groups.h"
 
 typedef enum
 {
@@ -26,15 +37,28 @@ typedef enum
 #define BOT1_PIN	DIO_PIN0
 
 /*	states messages	*/
-#define	Abnormal_Mes			350	
-#define Emergency_Mes			300
-#define	Off_Mes					255
-#define Emergency_counter_max	14
+#define	Abnormal_Mes			(350)	
+#define Emergency_Mes			(300)
+#define	Off_Mes					(255)
+
+
+/*	emergency	configuration	*/
+#define Emergency_counter_max	(110) //for 7 seconds
+#define	Emergecy_Max_Temp		((temp)50)
 
 		
 
 /* Initialization	*/
 void App_Init(void);
+void Free_RTOS_Init(void);
+
+/*	Tasks	*/
+void uart(void *par);
+void pot(void *par);
+void tmp(void *par);
+void eestate(void *par);
+void fan1(void *par);
+void emergency(void*par);
 
 
 /* E2PROM	State	*/

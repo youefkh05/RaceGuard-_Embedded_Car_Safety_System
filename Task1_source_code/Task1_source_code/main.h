@@ -16,11 +16,6 @@
 #include "PERIPHERAL_LIBRARY.h"
 #include "MODULE_LIBRARY.h"
 #include "APP.h"
-#include "FreeRTOS.h"
-#include "task.h"
-#include "semphr.h"
-#include "queue.h"
-#include "event_groups.h"
 #include <stdio.h>
 #include <string.h>
 #include <util/delay.h>		

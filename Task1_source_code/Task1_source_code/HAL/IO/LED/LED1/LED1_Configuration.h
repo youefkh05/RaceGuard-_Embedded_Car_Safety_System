@@ -14,7 +14,7 @@
 // Renaming Pin
 #define LED1_PIN    DIO_PIN0
 // Renaming Port
-#define LED1_PORT   DIO_PORTC
+#define LED1_PORT   DIO_PORTB
 // Renaming Status
 #define LED1_LOW    DIO_LOW
 // Renaming Status

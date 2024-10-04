@@ -15,7 +15,7 @@
 
 //potentiometer1
 #define POT1_PORT	PORTA
-#define POT1_PIN	DIO_PIN0
+#define POT1_PIN	ADC_0
 
 
 /*	states messages	*/
@@ -30,6 +30,9 @@ typedef enum
 	Abnormal_state=2,
 	Off_state=3
 }E2PROM_State;
+
+/* Initialization	*/
+void App_Init(void);
 
 /* handlers	*/
 void handle_Mes(temp T,dc_motor DC_MOT, E2PROM_State* S);

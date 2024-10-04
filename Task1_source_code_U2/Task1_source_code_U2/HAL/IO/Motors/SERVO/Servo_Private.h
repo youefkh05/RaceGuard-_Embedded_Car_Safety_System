@@ -13,7 +13,7 @@
 
 void ServoMotor_Initialize(void);
 
-void ServoMotor_Rotate(servo_angle angle);
+void ServoMotor_Rotate(uint8_t angle);
 
 
 

@@ -87,7 +87,9 @@ C_SRCS +=  \
 ../RTOS/SCR/PollQ.c \
 ../RTOS/SCR/port.c \
 ../RTOS/SCR/queue.c \
-../RTOS/SCR/tasks.c
+../RTOS/SCR/stream_buffer.c \
+../RTOS/SCR/tasks.c \
+../RTOS/SCR/timers.c
 
 
 PREPROCESSING_SRCS += 
@@ -121,7 +123,9 @@ RTOS/SCR/list.o \
 RTOS/SCR/PollQ.o \
 RTOS/SCR/port.o \
 RTOS/SCR/queue.o \
-RTOS/SCR/tasks.o
+RTOS/SCR/stream_buffer.o \
+RTOS/SCR/tasks.o \
+RTOS/SCR/timers.o
 
 OBJS_AS_ARGS +=  \
 APP/APP.o \
@@ -148,7 +152,9 @@ RTOS/SCR/list.o \
 RTOS/SCR/PollQ.o \
 RTOS/SCR/port.o \
 RTOS/SCR/queue.o \
-RTOS/SCR/tasks.o
+RTOS/SCR/stream_buffer.o \
+RTOS/SCR/tasks.o \
+RTOS/SCR/timers.o
 
 C_DEPS +=  \
 APP/APP.d \
@@ -175,7 +181,9 @@ RTOS/SCR/list.d \
 RTOS/SCR/PollQ.d \
 RTOS/SCR/port.d \
 RTOS/SCR/queue.d \
-RTOS/SCR/tasks.d
+RTOS/SCR/stream_buffer.d \
+RTOS/SCR/tasks.d \
+RTOS/SCR/timers.d
 
 C_DEPS_AS_ARGS +=  \
 APP/APP.d \
@@ -202,7 +210,9 @@ RTOS/SCR/list.d \
 RTOS/SCR/PollQ.d \
 RTOS/SCR/port.d \
 RTOS/SCR/queue.d \
-RTOS/SCR/tasks.d
+RTOS/SCR/stream_buffer.d \
+RTOS/SCR/tasks.d \
+RTOS/SCR/timers.d
 
 OUTPUT_FILE_PATH +=MCU1_CODE.elf
 
@@ -386,7 +396,21 @@ RTOS/SCR/queue.o: ../RTOS/SCR/queue.c
 	@echo Finished building: $<
 	
 
+RTOS/SCR/stream_buffer.o: ../RTOS/SCR/stream_buffer.c
+	@echo Building file: $<
+	@echo Invoking: XC8 C Compiler : 2.36
+	$(QUOTE)C:\Program Files\Microchip\xc8\v2.36\bin\xc8-cc.exe$(QUOTE)  -mcpu=ATmega32  -mdfp="C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\xc8"  -c -x c -funsigned-char -funsigned-bitfields -mext=cci -D__ATmega32__ -DDEBUG  -I"../APP" -I"../HAL" -I"../Main" -I"../MCAL" -I"../HAL/Configurations" -I"../HAL/EEPROM" -I"../HAL/IO/LCD" -I"../HAL/IO/Motors/DC" -I"../HAL/IO/Motors/SERVO" -I"../MCAL/ADC" -I"../MCAL/Configurations" -I"../MCAL/DIO" -I"../MCAL/INTERRUPT" -I"../MCAL/Timer0" -I"../MCAL/TWI" -I"../MCAL/UART" -I"../HAL/IO/LM35_TMP_Sensor" -I"../HAL/IO/LED" -I"../HAL/IO/LED/LED1" -I"../HAL/IO/LED/LED2" -I"../HAL/IO/LED/LED3" -I"../MCAL/WatchDog" -I"../My_RTOS" -I"../RTOS" -I"../RTOS/INC" -I"../RTOS/SCR"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
 RTOS/SCR/tasks.o: ../RTOS/SCR/tasks.c
+	@echo Building file: $<
+	@echo Invoking: XC8 C Compiler : 2.36
+	$(QUOTE)C:\Program Files\Microchip\xc8\v2.36\bin\xc8-cc.exe$(QUOTE)  -mcpu=ATmega32  -mdfp="C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\xc8"  -c -x c -funsigned-char -funsigned-bitfields -mext=cci -D__ATmega32__ -DDEBUG  -I"../APP" -I"../HAL" -I"../Main" -I"../MCAL" -I"../HAL/Configurations" -I"../HAL/EEPROM" -I"../HAL/IO/LCD" -I"../HAL/IO/Motors/DC" -I"../HAL/IO/Motors/SERVO" -I"../MCAL/ADC" -I"../MCAL/Configurations" -I"../MCAL/DIO" -I"../MCAL/INTERRUPT" -I"../MCAL/Timer0" -I"../MCAL/TWI" -I"../MCAL/UART" -I"../HAL/IO/LM35_TMP_Sensor" -I"../HAL/IO/LED" -I"../HAL/IO/LED/LED1" -I"../HAL/IO/LED/LED2" -I"../HAL/IO/LED/LED3" -I"../MCAL/WatchDog" -I"../My_RTOS" -I"../RTOS" -I"../RTOS/INC" -I"../RTOS/SCR"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+RTOS/SCR/timers.o: ../RTOS/SCR/timers.c
 	@echo Building file: $<
 	@echo Invoking: XC8 C Compiler : 2.36
 	$(QUOTE)C:\Program Files\Microchip\xc8\v2.36\bin\xc8-cc.exe$(QUOTE)  -mcpu=ATmega32  -mdfp="C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\xc8"  -c -x c -funsigned-char -funsigned-bitfields -mext=cci -D__ATmega32__ -DDEBUG  -I"../APP" -I"../HAL" -I"../Main" -I"../MCAL" -I"../HAL/Configurations" -I"../HAL/EEPROM" -I"../HAL/IO/LCD" -I"../HAL/IO/Motors/DC" -I"../HAL/IO/Motors/SERVO" -I"../MCAL/ADC" -I"../MCAL/Configurations" -I"../MCAL/DIO" -I"../MCAL/INTERRUPT" -I"../MCAL/Timer0" -I"../MCAL/TWI" -I"../MCAL/UART" -I"../HAL/IO/LM35_TMP_Sensor" -I"../HAL/IO/LED" -I"../HAL/IO/LED/LED1" -I"../HAL/IO/LED/LED2" -I"../HAL/IO/LED/LED3" -I"../MCAL/WatchDog" -I"../My_RTOS" -I"../RTOS" -I"../RTOS/INC" -I"../RTOS/SCR"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

@@ -50,5 +50,9 @@ RTOS\SCR\port.c
 
 RTOS\SCR\queue.c
 
+RTOS\SCR\stream_buffer.c
+
 RTOS\SCR\tasks.c
+
+RTOS\SCR\timers.c
 

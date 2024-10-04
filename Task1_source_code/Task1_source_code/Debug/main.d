@@ -42,12 +42,18 @@ main.d main.o: .././main.c \
  ../HAL/IO/LM35_TMP_Sensor/LM35_TMP_Sensor_Private.h \
  ../HAL/IO/LM35_TMP_Sensor/LM35_TMP_SENSOR_Configurations.h ../APP/APP.h \
  ../RTOS/INC/FreeRTOS.h ../RTOS/INC/FreeRTOSConfig.h \
- ../RTOS/INC/projdefs.h ../RTOS/INC/portable.h ../RTOS/INC/portmacro.h \
+ ../RTOS/INC/registers.h ../RTOS/INC/projdefs.h ../RTOS/INC/portable.h \
+ ../RTOS/INC/deprecated_definitions.h ../RTOS/INC/portmacro.h \
  ../RTOS/INC/mpu_wrappers.h ../RTOS/INC/task.h ../RTOS/INC/list.h \
- ../RTOS/INC/semphr.h ../RTOS/INC/queue.h ../RTOS/INC/queue.h \
- ../RTOS/INC/event_groups.h ../RTOS/INC/timers.h ../RTOS/INC/task.h \
+ ../RTOS/INC/timers.h ../RTOS/INC/task.h ../RTOS/INC/semphr.h \
+ ../RTOS/INC/queue.h ../RTOS/INC/queue.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\stdio.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\string.h
+ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\string.h \
+ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\time.h \
+ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\sys\time.h \
+ c:\program\ files\microchip\xc8\v2.36\avr\lib\gcc\avr\5.4.0\include\stdbool.h \
+ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\stdlib.h \
+ ../RTOS/INC/event_groups.h ../RTOS/INC/timers.h
 
 c:\program\ files\microchip\xc8\v2.36\avr\lib\gcc\avr\5.4.0\include\xc.h:
 
@@ -155,9 +161,13 @@ c:\program\ files\microchip\xc8\v2.36\avr\lib\gcc\avr\5.4.0\include\stddef.h:
 
 ../RTOS/INC/FreeRTOSConfig.h:
 
+../RTOS/INC/registers.h:
+
 ../RTOS/INC/projdefs.h:
 
 ../RTOS/INC/portable.h:
+
+../RTOS/INC/deprecated_definitions.h:
 
 ../RTOS/INC/portmacro.h:
 
@@ -167,18 +177,28 @@ c:\program\ files\microchip\xc8\v2.36\avr\lib\gcc\avr\5.4.0\include\stddef.h:
 
 ../RTOS/INC/list.h:
 
+../RTOS/INC/timers.h:
+
+../RTOS/INC/task.h:
+
 ../RTOS/INC/semphr.h:
 
 ../RTOS/INC/queue.h:
 
 ../RTOS/INC/queue.h:
 
-../RTOS/INC/event_groups.h:
-
-../RTOS/INC/timers.h:
-
-../RTOS/INC/task.h:
-
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\stdio.h:
 
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\string.h:
+
+c:\program\ files\microchip\xc8\v2.36\avr\avr\include\time.h:
+
+c:\program\ files\microchip\xc8\v2.36\avr\avr\include\sys\time.h:
+
+c:\program\ files\microchip\xc8\v2.36\avr\lib\gcc\avr\5.4.0\include\stdbool.h:
+
+c:\program\ files\microchip\xc8\v2.36\avr\avr\include\stdlib.h:
+
+../RTOS/INC/event_groups.h:
+
+../RTOS/INC/timers.h:

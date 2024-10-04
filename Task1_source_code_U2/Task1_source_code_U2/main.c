@@ -8,59 +8,24 @@
 #include <xc.h>
 #include "main.h"
 
-//variables (LOCAL But golbal to debugg)
-uint16_t UART_Rdata=0;
-volatile E2PROM_State currentState =Normal_state;
-uint16_t speed=0;
+/*		 Global		*/
+extern dc_motor DC_mach1;
 
-xSemaphoreHandle LED_Semaphore;
-xSemaphoreHandle LCD_Semaphore;
-xSemaphoreHandle S7_Semaphore;//J
-xSemaphoreHandle xMutex;
-TaskHandle_t xHanleLED1;
-TaskHandle_t xHanleLED2;
-TaskHandle_t xHanleLED3;
-TaskHandle_t xHanleLED4;
-TaskHandle_t xHanlebot1;
-TaskHandle_t xHanlepot1;
-TaskHandle_t xHanleS7;
-TaskHandle_t xHanleLCD;
-TaskHandle_t xHanleTMP;
+//variables (LOCAL But golbal to debugg)
+extern uint16_t UART_Rdata;
+extern volatile E2PROM_State currentState;
+extern uint16_t speed;
 
 int main(void)
 {	
-	LED_Semaphore=xSemaphoreCreateBinary();
-	LCD_Semaphore=xSemaphoreCreateBinary();
-	
-	/*		Initializations		*/
-	
-	dc_motor DC_mach1=DC_Motor1;
-	DC_Initialize(DC_mach1);
-	ServoMotor_Initialize();
-	LED1_Initialize();
-	LED2_Initialize();
-	LED3_Initialize();
-	//LED4_Initialize();
-	BUZZER_Initialize();
-	ADC_Initialize(5, 1024);
-	uart_status UART_State= UART_Initialize_WithoutInterrupt(UART_9600,Synchronous, Disable , Bits_8, Bit_1);
-	if(UART_State==UART_NOK){
-		return 0;
-	}
-	
-	
-	
-	
-	//Start the machine
-	ServoMotor_Rotate(angle_0);
-	DC_Start(DC_mach1,DC_CW);
+	App_Init();
 
 	
 	/*	Main	Code	*/
     while(1)
     {	
 		/* Recieve the message (Temperature)	*/
-		UART_State= UART_Receive_Word(&UART_Rdata);
+		UART_Receive_Word(&UART_Rdata);
 		
 		speed=ADC_Read(POT1_PIN);
 		

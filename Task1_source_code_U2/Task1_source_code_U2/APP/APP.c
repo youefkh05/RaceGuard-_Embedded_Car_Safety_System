@@ -7,6 +7,34 @@
 
 #include "APP.h"
 
+/*		 Global		*/
+dc_motor DC_mach1=DC_Motor1;
+
+//variables (LOCAL But golbal to debugg)
+uint16_t UART_Rdata=0;
+volatile E2PROM_State currentState =Normal_state;
+uint16_t speed=0;
+
+void App_Init(void){
+	/*		Initializations		*/
+	DC_Initialize(DC_mach1);
+	ServoMotor_Initialize();
+	LED1_Initialize();
+	LED2_Initialize();
+	LED3_Initialize();
+	//LED4_Initialize();
+	BUZZER_Initialize();
+	ADC_Initialize(AVCC,ADC_PRE0);
+	uart_status UART_State= UART_Initialize_WithoutInterrupt(UART_9600,Synchronous, Disable , Bits_8, Bit_1);
+	if(UART_State==UART_NOK){
+		return ;
+	}
+	
+	//Start the machine
+	ServoMotor_Rotate(90);
+	DC_Start(DC_mach1,DC_CW);
+}
+
 void handle_Mes(temp T,dc_motor DC_MOT, E2PROM_State* S){
 	
 	// off all LED and Buzzer
@@ -45,7 +73,7 @@ void handle_Mes(temp T,dc_motor DC_MOT, E2PROM_State* S){
 		LED1_ON();
 		BUZZER_ON();
 		DC_Stop(DC_MOT);
-		ServoMotor_Rotate(angle_P90);
+		ServoMotor_Rotate(90);
 		
 	}
 	else {

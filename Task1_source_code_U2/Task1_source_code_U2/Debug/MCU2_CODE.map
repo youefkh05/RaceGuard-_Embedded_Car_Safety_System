@@ -53,23 +53,6 @@ c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../av
 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
                               c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(_Exit.o) (_exit)
 
-Allocating common symbols
-Common symbol       size              file
-
-LED_Semaphore       0x2               main.o
-xHanleLED3          0x2               main.o
-xMutex              0x2               main.o
-LCD_Semaphore       0x2               main.o
-xHanlepot1          0x2               main.o
-xHanleLED1          0x2               main.o
-xHanleLED2          0x2               main.o
-xHanleLCD           0x2               main.o
-xHanleS7            0x2               main.o
-xHanleTMP           0x2               main.o
-xHanlebot1          0x2               main.o
-xHanleLED4          0x2               main.o
-S7_Semaphore        0x2               main.o
-
 Discarded input sections
 
  .data          0x0000000000000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega32.o
@@ -450,10 +433,29 @@ Discarded input sections
  .text          0x0000000000000000        0x0 RTOS/SCR/heap_1.o
  .data          0x0000000000000000        0x0 RTOS/SCR/heap_1.o
  .bss           0x0000000000000000        0x0 RTOS/SCR/heap_1.o
+ .text.pvPortMalloc
+                0x0000000000000000       0x6a RTOS/SCR/heap_1.o
+ .text.vPortFree
+                0x0000000000000000        0x2 RTOS/SCR/heap_1.o
  .text.vPortInitialiseBlocks
                 0x0000000000000000        0xa RTOS/SCR/heap_1.o
  .text.xPortGetFreeHeapSize
                 0x0000000000000000       0x12 RTOS/SCR/heap_1.o
+ .bss.pucAlignedHeap.1961
+                0x0000000000000000        0x2 RTOS/SCR/heap_1.o
+ .bss.xNextFreeByte
+                0x0000000000000000        0x2 RTOS/SCR/heap_1.o
+ .bss.ucHeap    0x0000000000000000      0x5dc RTOS/SCR/heap_1.o
+ .debug_info    0x0000000000000000      0x42f RTOS/SCR/heap_1.o
+ .debug_abbrev  0x0000000000000000      0x11e RTOS/SCR/heap_1.o
+ .debug_loc     0x0000000000000000       0xf1 RTOS/SCR/heap_1.o
+ .debug_aranges
+                0x0000000000000000       0x38 RTOS/SCR/heap_1.o
+ .debug_ranges  0x0000000000000000       0x28 RTOS/SCR/heap_1.o
+ .debug_line    0x0000000000000000      0x128 RTOS/SCR/heap_1.o
+ .debug_str     0x0000000000000000       0x1f RTOS/SCR/heap_1.o
+ .comment       0x0000000000000000       0x30 RTOS/SCR/heap_1.o
+ .debug_frame   0x0000000000000000       0x60 RTOS/SCR/heap_1.o
  .text          0x0000000000000000        0x0 RTOS/SCR/integer.o
  .data          0x0000000000000000        0x0 RTOS/SCR/integer.o
  .bss           0x0000000000000000        0x0 RTOS/SCR/integer.o
@@ -480,6 +482,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 RTOS/SCR/list.o
  .data          0x0000000000000000        0x0 RTOS/SCR/list.o
  .bss           0x0000000000000000        0x0 RTOS/SCR/list.o
+ .text.vListInitialise
+                0x0000000000000000       0x1c RTOS/SCR/list.o
  .text.vListInitialiseItem
                 0x0000000000000000        0x8 RTOS/SCR/list.o
  .text.vListInsert
@@ -524,6 +528,8 @@ Discarded input sections
                 0x0000000000000000       0x5e RTOS/SCR/port.o
  .text.vPortEndScheduler
                 0x0000000000000000        0x2 RTOS/SCR/port.o
+ .text.vPortYield
+                0x0000000000000000       0xb2 RTOS/SCR/port.o
  .text          0x0000000000000000        0x0 RTOS/SCR/queue.o
  .data          0x0000000000000000        0x0 RTOS/SCR/queue.o
  .bss           0x0000000000000000        0x0 RTOS/SCR/queue.o
@@ -537,6 +543,10 @@ Discarded input sections
                 0x0000000000000000       0x36 RTOS/SCR/queue.o
  .text.prvUnlockQueue
                 0x0000000000000000       0x74 RTOS/SCR/queue.o
+ .text.xQueueGenericReset
+                0x0000000000000000       0x8e RTOS/SCR/queue.o
+ .text.xQueueGenericCreate
+                0x0000000000000000       0x5c RTOS/SCR/queue.o
  .text.xQueueCreateCountingSemaphore
                 0x0000000000000000       0x18 RTOS/SCR/queue.o
  .text.xQueueGenericSend
@@ -571,6 +581,16 @@ Discarded input sections
                 0x0000000000000000       0x50 RTOS/SCR/queue.o
  .text.xQueueCRReceiveFromISR
                 0x0000000000000000       0x86 RTOS/SCR/queue.o
+ .debug_info    0x0000000000000000     0x1766 RTOS/SCR/queue.o
+ .debug_abbrev  0x0000000000000000      0x270 RTOS/SCR/queue.o
+ .debug_loc     0x0000000000000000     0x1b14 RTOS/SCR/queue.o
+ .debug_aranges
+                0x0000000000000000       0xd8 RTOS/SCR/queue.o
+ .debug_ranges  0x0000000000000000       0xc8 RTOS/SCR/queue.o
+ .debug_line    0x0000000000000000      0xa1b RTOS/SCR/queue.o
+ .debug_str     0x0000000000000000      0x228 RTOS/SCR/queue.o
+ .comment       0x0000000000000000       0x30 RTOS/SCR/queue.o
+ .debug_frame   0x0000000000000000      0x2f8 RTOS/SCR/queue.o
  .text          0x0000000000000000        0x0 RTOS/SCR/tasks.o
  .data          0x0000000000000000        0x0 RTOS/SCR/tasks.o
  .bss           0x0000000000000000        0x0 RTOS/SCR/tasks.o
@@ -596,12 +616,16 @@ Discarded input sections
                 0x0000000000000000       0x60 RTOS/SCR/tasks.o
  .text.vTaskEndScheduler
                 0x0000000000000000        0xc RTOS/SCR/tasks.o
+ .text.vTaskSuspendAll
+                0x0000000000000000        0xc RTOS/SCR/tasks.o
  .text.xTaskGetTickCount
                 0x0000000000000000       0x14 RTOS/SCR/tasks.o
  .text.xTaskGetTickCountFromISR
                 0x0000000000000000        0xa RTOS/SCR/tasks.o
  .text.uxTaskGetNumberOfTasks
                 0x0000000000000000        0x6 RTOS/SCR/tasks.o
+ .text.xTaskResumeAll
+                0x0000000000000000       0xe2 RTOS/SCR/tasks.o
  .text.vTaskDelayUntil
                 0x0000000000000000       0x8a RTOS/SCR/tasks.o
  .text.vTaskDelay
@@ -614,6 +638,8 @@ Discarded input sections
                 0x0000000000000000       0x3a RTOS/SCR/tasks.o
  .text.vTaskPlaceOnUnorderedEventList
                 0x0000000000000000       0x48 RTOS/SCR/tasks.o
+ .text.xTaskRemoveFromEventList
+                0x0000000000000000       0x98 RTOS/SCR/tasks.o
  .text.xTaskRemoveFromUnorderedEventList
                 0x0000000000000000       0x74 RTOS/SCR/tasks.o
  .text.vTaskSetTimeOutState
@@ -636,9 +662,13 @@ Discarded input sections
                 0x0000000000000000        0x1 RTOS/SCR/tasks.o
  .bss.xSchedulerRunning
                 0x0000000000000000        0x1 RTOS/SCR/tasks.o
+ .bss.uxCurrentNumberOfTasks
+                0x0000000000000000        0x1 RTOS/SCR/tasks.o
  .bss.uxTasksDeleted
                 0x0000000000000000        0x1 RTOS/SCR/tasks.o
  .bss.xTasksWaitingTermination
+                0x0000000000000000        0x9 RTOS/SCR/tasks.o
+ .bss.xPendingReadyList
                 0x0000000000000000        0x9 RTOS/SCR/tasks.o
  .bss.xDelayedTaskList2
                 0x0000000000000000        0x9 RTOS/SCR/tasks.o
@@ -878,8 +908,11 @@ Discarded input sections
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_xload_2.o)
  .text.libgcc.div
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_xload_2.o)
+ .text.libgcc   0x0000000000000000       0x10 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_xload_2.o)
  .text.libgcc.prologue
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_xload_2.o)
+ .stack.descriptors.hdr
+                0x0000000000000000        0xe c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_xload_2.o)
  .stack.descriptors
                 0x0000000000000000       0x17 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_xload_2.o)
  .text.libgcc.builtins
@@ -1163,36 +1196,21 @@ END GROUP
  *(.gnu.linkonce.d*)
  *(.gnu.linkonce.r*)
                 0x0000000000800060                . = ALIGN (0x2)
- *fill*         0x0000000000800060        0x0 
                 0x0000000000800060                _edata = .
                 [!provide]                        PROVIDE (__data_end, .)
 
-.bss            0x0000000000800060       0x1a
+.bss            0x0000000000800060        0x0
                 [!provide]                        PROVIDE (__bss_start, .)
  *(COMMON)
- COMMON         0x0000000000800060       0x1a main.o
-                0x0000000000800060                LED_Semaphore
-                0x0000000000800062                xHanleLED3
-                0x0000000000800064                xMutex
-                0x0000000000800066                LCD_Semaphore
-                0x0000000000800068                xHanlepot1
-                0x000000000080006a                xHanleLED1
-                0x000000000080006c                xHanleLED2
-                0x000000000080006e                xHanleLCD
-                0x0000000000800070                xHanleS7
-                0x0000000000800072                xHanleTMP
-                0x0000000000800074                xHanlebot1
-                0x0000000000800076                xHanleLED4
-                0x0000000000800078                S7_Semaphore
                 [!provide]                        PROVIDE (__bss_end, .)
                 0x00000000000000ca                __data_load_start = LOADADDR (.data)
                 0x00000000000000ca                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x000000000080007a        0x0
+.noinit         0x0000000000800060        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                        PROVIDE (__noinit_end, .)
-                0x000000000080007a                _end = .
+                0x0000000000800060                _end = .
 
 .eeprom         0x0000000000810000        0x0
  *(.eeprom*)
@@ -1245,16 +1263,14 @@ END GROUP
  .comment       0x000000000000002f       0x30 MCAL/ADC/ADC_Interface.o
  .comment       0x000000000000002f       0x30 MCAL/DIO/DIO_Interface.o
  .comment       0x000000000000002f       0x30 MCAL/UART/UART_Interface.o
- .comment       0x000000000000002f       0x30 RTOS/SCR/heap_1.o
  .comment       0x000000000000002f       0x30 RTOS/SCR/list.o
  .comment       0x000000000000002f       0x30 RTOS/SCR/port.o
- .comment       0x000000000000002f       0x30 RTOS/SCR/queue.o
  .comment       0x000000000000002f       0x30 RTOS/SCR/tasks.o
  .comment       0x000000000000002f       0x30 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
  .comment       0x000000000000002f       0x30 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(_Exit.o)
 
 .stack.descriptors.hdr
-                0x0000000000000000       0x8c
+                0x0000000000000000       0x7e
  .stack.descriptors.hdr
                 0x0000000000000000        0xe c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libm.a(cmpsf2.o)
  .stack.descriptors.hdr
@@ -1272,9 +1288,7 @@ END GROUP
  .stack.descriptors.hdr
                 0x0000000000000062        0xe c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_tablejump2.o)
  .stack.descriptors.hdr
-                0x0000000000000070        0xe c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_xload_2.o)
- .stack.descriptors.hdr
-                0x000000000000007e        0xe c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
+                0x0000000000000070        0xe c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
 
 .note.GNU-stack
                 0x0000000000000000        0x0
@@ -1306,157 +1320,141 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x550
+.debug_aranges  0x0000000000000000      0x448
  *(.debug_aranges)
  .debug_aranges
-                0x0000000000000000       0x28 APP/APP.o
+                0x0000000000000000       0x30 APP/APP.o
  .debug_aranges
-                0x0000000000000028       0x38 HAL/IO/Buzzer/BUZZER_Interface.o
+                0x0000000000000030       0x38 HAL/IO/Buzzer/BUZZER_Interface.o
  .debug_aranges
-                0x0000000000000060       0x48 HAL/IO/LED/LED1/LED1_Interface.o
+                0x0000000000000068       0x48 HAL/IO/LED/LED1/LED1_Interface.o
  .debug_aranges
-                0x00000000000000a8       0x38 HAL/IO/LED/LED2/LED2_Interface.o
+                0x00000000000000b0       0x38 HAL/IO/LED/LED2/LED2_Interface.o
  .debug_aranges
-                0x00000000000000e0       0x38 HAL/IO/LED/LED3/LED3_Interface.o
+                0x00000000000000e8       0x38 HAL/IO/LED/LED3/LED3_Interface.o
  .debug_aranges
-                0x0000000000000118       0x38 HAL/IO/Motors/DC/DC_Interface.o
+                0x0000000000000120       0x38 HAL/IO/Motors/DC/DC_Interface.o
  .debug_aranges
-                0x0000000000000150       0x28 HAL/IO/Motors/SERVO/Servo_Interface.o
+                0x0000000000000158       0x28 HAL/IO/Motors/SERVO/Servo_Interface.o
  .debug_aranges
-                0x0000000000000178       0x20 main.o
+                0x0000000000000180       0x20 main.o
  .debug_aranges
-                0x0000000000000198       0x28 MCAL/ADC/ADC_Interface.o
+                0x00000000000001a0       0x28 MCAL/ADC/ADC_Interface.o
  .debug_aranges
-                0x00000000000001c0       0x68 MCAL/DIO/DIO_Interface.o
+                0x00000000000001c8       0x68 MCAL/DIO/DIO_Interface.o
  .debug_aranges
-                0x0000000000000228       0x60 MCAL/UART/UART_Interface.o
+                0x0000000000000230       0x60 MCAL/UART/UART_Interface.o
  .debug_aranges
-                0x0000000000000288       0x38 RTOS/SCR/heap_1.o
+                0x0000000000000290       0x40 RTOS/SCR/list.o
  .debug_aranges
-                0x00000000000002c0       0x40 RTOS/SCR/list.o
+                0x00000000000002d0       0x50 RTOS/SCR/port.o
  .debug_aranges
-                0x0000000000000300       0x50 RTOS/SCR/port.o
- .debug_aranges
-                0x0000000000000350       0xd8 RTOS/SCR/queue.o
- .debug_aranges
-                0x0000000000000428      0x128 RTOS/SCR/tasks.o
+                0x0000000000000320      0x128 RTOS/SCR/tasks.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x87fd
+.debug_info     0x0000000000000000     0x6a5e
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega32.o
- .debug_info    0x00000000000004e6      0x5e1 APP/APP.o
- .debug_info    0x0000000000000ac7      0x494 HAL/IO/Buzzer/BUZZER_Interface.o
- .debug_info    0x0000000000000f5b      0x54c HAL/IO/LED/LED1/LED1_Interface.o
- .debug_info    0x00000000000014a7      0x48c HAL/IO/LED/LED2/LED2_Interface.o
- .debug_info    0x0000000000001933      0x48c HAL/IO/LED/LED3/LED3_Interface.o
- .debug_info    0x0000000000001dbf      0x782 HAL/IO/Motors/DC/DC_Interface.o
- .debug_info    0x0000000000002541      0x415 HAL/IO/Motors/SERVO/Servo_Interface.o
- .debug_info    0x0000000000002956      0x964 main.o
- .debug_info    0x00000000000032ba      0x464 MCAL/ADC/ADC_Interface.o
- .debug_info    0x000000000000371e      0x690 MCAL/DIO/DIO_Interface.o
- .debug_info    0x0000000000003dae      0x813 MCAL/UART/UART_Interface.o
- .debug_info    0x00000000000045c1      0x42f RTOS/SCR/heap_1.o
- .debug_info    0x00000000000049f0      0x5a9 RTOS/SCR/list.o
- .debug_info    0x0000000000004f99      0x536 RTOS/SCR/port.o
- .debug_info    0x00000000000054cf     0x1766 RTOS/SCR/queue.o
- .debug_info    0x0000000000006c35     0x1bc8 RTOS/SCR/tasks.o
+ .debug_info    0x00000000000004e6      0x8ec APP/APP.o
+ .debug_info    0x0000000000000dd2      0x494 HAL/IO/Buzzer/BUZZER_Interface.o
+ .debug_info    0x0000000000001266      0x54c HAL/IO/LED/LED1/LED1_Interface.o
+ .debug_info    0x00000000000017b2      0x48c HAL/IO/LED/LED2/LED2_Interface.o
+ .debug_info    0x0000000000001c3e      0x48c HAL/IO/LED/LED3/LED3_Interface.o
+ .debug_info    0x00000000000020ca      0x784 HAL/IO/Motors/DC/DC_Interface.o
+ .debug_info    0x000000000000284e      0x3e7 HAL/IO/Motors/SERVO/Servo_Interface.o
+ .debug_info    0x0000000000002c35      0x47b main.o
+ .debug_info    0x00000000000030b0      0x464 MCAL/ADC/ADC_Interface.o
+ .debug_info    0x0000000000003514      0x690 MCAL/DIO/DIO_Interface.o
+ .debug_info    0x0000000000003ba4      0x813 MCAL/UART/UART_Interface.o
+ .debug_info    0x00000000000043b7      0x5a9 RTOS/SCR/list.o
+ .debug_info    0x0000000000004960      0x536 RTOS/SCR/port.o
+ .debug_info    0x0000000000004e96     0x1bc8 RTOS/SCR/tasks.o
 
-.debug_abbrev   0x0000000000000000     0x15e9
+.debug_abbrev   0x0000000000000000     0x1247
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x4a3 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega32.o
- .debug_abbrev  0x00000000000004a3       0xf2 APP/APP.o
- .debug_abbrev  0x0000000000000595       0x7c HAL/IO/Buzzer/BUZZER_Interface.o
- .debug_abbrev  0x0000000000000611       0xc0 HAL/IO/LED/LED1/LED1_Interface.o
- .debug_abbrev  0x00000000000006d1       0x7c HAL/IO/LED/LED2/LED2_Interface.o
- .debug_abbrev  0x000000000000074d       0x7c HAL/IO/LED/LED3/LED3_Interface.o
- .debug_abbrev  0x00000000000007c9       0xdd HAL/IO/Motors/DC/DC_Interface.o
- .debug_abbrev  0x00000000000008a6       0xa1 HAL/IO/Motors/SERVO/Servo_Interface.o
- .debug_abbrev  0x0000000000000947       0xfb main.o
- .debug_abbrev  0x0000000000000a42       0xb6 MCAL/ADC/ADC_Interface.o
- .debug_abbrev  0x0000000000000af8       0xdf MCAL/DIO/DIO_Interface.o
- .debug_abbrev  0x0000000000000bd7      0x151 MCAL/UART/UART_Interface.o
- .debug_abbrev  0x0000000000000d28      0x11e RTOS/SCR/heap_1.o
- .debug_abbrev  0x0000000000000e46      0x129 RTOS/SCR/list.o
- .debug_abbrev  0x0000000000000f6f      0x145 RTOS/SCR/port.o
- .debug_abbrev  0x00000000000010b4      0x270 RTOS/SCR/queue.o
- .debug_abbrev  0x0000000000001324      0x2c5 RTOS/SCR/tasks.o
+ .debug_abbrev  0x00000000000004a3      0x12f APP/APP.o
+ .debug_abbrev  0x00000000000005d2       0x7c HAL/IO/Buzzer/BUZZER_Interface.o
+ .debug_abbrev  0x000000000000064e       0xc0 HAL/IO/LED/LED1/LED1_Interface.o
+ .debug_abbrev  0x000000000000070e       0x7c HAL/IO/LED/LED2/LED2_Interface.o
+ .debug_abbrev  0x000000000000078a       0x7c HAL/IO/LED/LED3/LED3_Interface.o
+ .debug_abbrev  0x0000000000000806       0xce HAL/IO/Motors/DC/DC_Interface.o
+ .debug_abbrev  0x00000000000008d4       0xa7 HAL/IO/Motors/SERVO/Servo_Interface.o
+ .debug_abbrev  0x000000000000097b       0xb3 main.o
+ .debug_abbrev  0x0000000000000a2e       0xb6 MCAL/ADC/ADC_Interface.o
+ .debug_abbrev  0x0000000000000ae4       0xdf MCAL/DIO/DIO_Interface.o
+ .debug_abbrev  0x0000000000000bc3      0x151 MCAL/UART/UART_Interface.o
+ .debug_abbrev  0x0000000000000d14      0x129 RTOS/SCR/list.o
+ .debug_abbrev  0x0000000000000e3d      0x145 RTOS/SCR/port.o
+ .debug_abbrev  0x0000000000000f82      0x2c5 RTOS/SCR/tasks.o
 
-.debug_line     0x0000000000000000     0x3206
+.debug_line     0x0000000000000000     0x25ba
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x119 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega32.o
- .debug_line    0x0000000000000119      0x2ef APP/APP.o
- .debug_line    0x0000000000000408       0xcd HAL/IO/Buzzer/BUZZER_Interface.o
- .debug_line    0x00000000000004d5      0x141 HAL/IO/LED/LED1/LED1_Interface.o
- .debug_line    0x0000000000000616       0xcd HAL/IO/LED/LED2/LED2_Interface.o
- .debug_line    0x00000000000006e3       0xcd HAL/IO/LED/LED3/LED3_Interface.o
- .debug_line    0x00000000000007b0      0x20b HAL/IO/Motors/DC/DC_Interface.o
- .debug_line    0x00000000000009bb      0x120 HAL/IO/Motors/SERVO/Servo_Interface.o
- .debug_line    0x0000000000000adb      0x2d4 main.o
- .debug_line    0x0000000000000daf      0x146 MCAL/ADC/ADC_Interface.o
- .debug_line    0x0000000000000ef5      0x434 MCAL/DIO/DIO_Interface.o
- .debug_line    0x0000000000001329      0x408 MCAL/UART/UART_Interface.o
- .debug_line    0x0000000000001731      0x128 RTOS/SCR/heap_1.o
- .debug_line    0x0000000000001859      0x1c4 RTOS/SCR/list.o
- .debug_line    0x0000000000001a1d      0x296 RTOS/SCR/port.o
- .debug_line    0x0000000000001cb3      0xa1b RTOS/SCR/queue.o
- .debug_line    0x00000000000026ce      0xb38 RTOS/SCR/tasks.o
+ .debug_line    0x0000000000000119      0x37b APP/APP.o
+ .debug_line    0x0000000000000494       0xcd HAL/IO/Buzzer/BUZZER_Interface.o
+ .debug_line    0x0000000000000561      0x141 HAL/IO/LED/LED1/LED1_Interface.o
+ .debug_line    0x00000000000006a2       0xcd HAL/IO/LED/LED2/LED2_Interface.o
+ .debug_line    0x000000000000076f       0xcd HAL/IO/LED/LED3/LED3_Interface.o
+ .debug_line    0x000000000000083c      0x20b HAL/IO/Motors/DC/DC_Interface.o
+ .debug_line    0x0000000000000a47      0x112 HAL/IO/Motors/SERVO/Servo_Interface.o
+ .debug_line    0x0000000000000b59      0x14d main.o
+ .debug_line    0x0000000000000ca6      0x146 MCAL/ADC/ADC_Interface.o
+ .debug_line    0x0000000000000dec      0x434 MCAL/DIO/DIO_Interface.o
+ .debug_line    0x0000000000001220      0x408 MCAL/UART/UART_Interface.o
+ .debug_line    0x0000000000001628      0x1c4 RTOS/SCR/list.o
+ .debug_line    0x00000000000017ec      0x296 RTOS/SCR/port.o
+ .debug_line    0x0000000000001a82      0xb38 RTOS/SCR/tasks.o
 
-.debug_frame    0x0000000000000000      0xcf4
+.debug_frame    0x0000000000000000      0x9ac
  *(.debug_frame)
- .debug_frame   0x0000000000000000       0x64 APP/APP.o
- .debug_frame   0x0000000000000064       0x54 HAL/IO/Buzzer/BUZZER_Interface.o
- .debug_frame   0x00000000000000b8       0x74 HAL/IO/LED/LED1/LED1_Interface.o
- .debug_frame   0x000000000000012c       0x54 HAL/IO/LED/LED2/LED2_Interface.o
- .debug_frame   0x0000000000000180       0x54 HAL/IO/LED/LED3/LED3_Interface.o
- .debug_frame   0x00000000000001d4       0x5c HAL/IO/Motors/DC/DC_Interface.o
- .debug_frame   0x0000000000000230       0x34 HAL/IO/Motors/SERVO/Servo_Interface.o
- .debug_frame   0x0000000000000264       0x2c main.o
- .debug_frame   0x0000000000000290       0x34 MCAL/ADC/ADC_Interface.o
- .debug_frame   0x00000000000002c4       0xb4 MCAL/DIO/DIO_Interface.o
- .debug_frame   0x0000000000000378      0x108 MCAL/UART/UART_Interface.o
- .debug_frame   0x0000000000000480       0x60 RTOS/SCR/heap_1.o
- .debug_frame   0x00000000000004e0       0x88 RTOS/SCR/list.o
- .debug_frame   0x0000000000000568       0x84 RTOS/SCR/port.o
- .debug_frame   0x00000000000005ec      0x2f8 RTOS/SCR/queue.o
- .debug_frame   0x00000000000008e4      0x410 RTOS/SCR/tasks.o
+ .debug_frame   0x0000000000000000       0x7c APP/APP.o
+ .debug_frame   0x000000000000007c       0x54 HAL/IO/Buzzer/BUZZER_Interface.o
+ .debug_frame   0x00000000000000d0       0x74 HAL/IO/LED/LED1/LED1_Interface.o
+ .debug_frame   0x0000000000000144       0x54 HAL/IO/LED/LED2/LED2_Interface.o
+ .debug_frame   0x0000000000000198       0x54 HAL/IO/LED/LED3/LED3_Interface.o
+ .debug_frame   0x00000000000001ec       0x5c HAL/IO/Motors/DC/DC_Interface.o
+ .debug_frame   0x0000000000000248       0x34 HAL/IO/Motors/SERVO/Servo_Interface.o
+ .debug_frame   0x000000000000027c       0x24 main.o
+ .debug_frame   0x00000000000002a0       0x34 MCAL/ADC/ADC_Interface.o
+ .debug_frame   0x00000000000002d4       0xb4 MCAL/DIO/DIO_Interface.o
+ .debug_frame   0x0000000000000388      0x108 MCAL/UART/UART_Interface.o
+ .debug_frame   0x0000000000000490       0x88 RTOS/SCR/list.o
+ .debug_frame   0x0000000000000518       0x84 RTOS/SCR/port.o
+ .debug_frame   0x000000000000059c      0x410 RTOS/SCR/tasks.o
 
-.debug_str      0x0000000000000000      0x87b
+.debug_str      0x0000000000000000      0x60e
  *(.debug_str)
  .debug_str     0x0000000000000000      0x196 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega32.o
- .debug_str     0x0000000000000196       0x63 APP/APP.o
- .debug_str     0x00000000000001f9       0x37 HAL/IO/Buzzer/BUZZER_Interface.o
- .debug_str     0x0000000000000230       0x4c HAL/IO/LED/LED1/LED1_Interface.o
- .debug_str     0x000000000000027c       0x37 HAL/IO/LED/LED2/LED2_Interface.o
- .debug_str     0x00000000000002b3       0x37 HAL/IO/LED/LED3/LED3_Interface.o
- .debug_str     0x00000000000002ea       0x2a HAL/IO/Motors/DC/DC_Interface.o
- .debug_str     0x0000000000000314       0x14 HAL/IO/Motors/SERVO/Servo_Interface.o
- .debug_str     0x0000000000000328       0xfb main.o
- .debug_str     0x0000000000000423        0x0 MCAL/ADC/ADC_Interface.o
- .debug_str     0x0000000000000423        0x5 MCAL/DIO/DIO_Interface.o
- .debug_str     0x0000000000000428       0x25 MCAL/UART/UART_Interface.o
- .debug_str     0x000000000000044d       0x1f RTOS/SCR/heap_1.o
- .debug_str     0x000000000000046c       0x2b RTOS/SCR/list.o
- .debug_str     0x0000000000000497       0x26 RTOS/SCR/port.o
- .debug_str     0x00000000000004bd      0x228 RTOS/SCR/queue.o
- .debug_str     0x00000000000006e5      0x196 RTOS/SCR/tasks.o
+ .debug_str     0x0000000000000196       0xf9 APP/APP.o
+ .debug_str     0x000000000000028f       0x37 HAL/IO/Buzzer/BUZZER_Interface.o
+ .debug_str     0x00000000000002c6       0x4c HAL/IO/LED/LED1/LED1_Interface.o
+ .debug_str     0x0000000000000312       0x37 HAL/IO/LED/LED2/LED2_Interface.o
+ .debug_str     0x0000000000000349       0x37 HAL/IO/LED/LED3/LED3_Interface.o
+ .debug_str     0x0000000000000380       0x2a HAL/IO/Motors/DC/DC_Interface.o
+ .debug_str     0x00000000000003aa       0x14 HAL/IO/Motors/SERVO/Servo_Interface.o
+ .debug_str     0x00000000000003be       0x3f main.o
+ .debug_str     0x00000000000003fd        0x0 MCAL/ADC/ADC_Interface.o
+ .debug_str     0x00000000000003fd        0x5 MCAL/DIO/DIO_Interface.o
+ .debug_str     0x0000000000000402       0x25 MCAL/UART/UART_Interface.o
+ .debug_str     0x0000000000000427       0x2b RTOS/SCR/list.o
+ .debug_str     0x0000000000000452       0x26 RTOS/SCR/port.o
+ .debug_str     0x0000000000000478      0x196 RTOS/SCR/tasks.o
 
-.debug_loc      0x0000000000000000     0x4287
+.debug_loc      0x0000000000000000     0x26a6
  *(.debug_loc)
- .debug_loc     0x0000000000000000      0x16b APP/APP.o
- .debug_loc     0x000000000000016b       0x21 HAL/IO/LED/LED1/LED1_Interface.o
- .debug_loc     0x000000000000018c      0x156 HAL/IO/Motors/DC/DC_Interface.o
- .debug_loc     0x00000000000002e2       0x40 main.o
- .debug_loc     0x0000000000000322      0x12b MCAL/ADC/ADC_Interface.o
- .debug_loc     0x000000000000044d      0x628 MCAL/DIO/DIO_Interface.o
- .debug_loc     0x0000000000000a75      0x583 MCAL/UART/UART_Interface.o
- .debug_loc     0x0000000000000ff8       0xf1 RTOS/SCR/heap_1.o
- .debug_loc     0x00000000000010e9      0x145 RTOS/SCR/list.o
- .debug_loc     0x000000000000122e      0x2a0 RTOS/SCR/port.o
- .debug_loc     0x00000000000014ce     0x1b14 RTOS/SCR/queue.o
- .debug_loc     0x0000000000002fe2     0x12a5 RTOS/SCR/tasks.o
+ .debug_loc     0x0000000000000000      0x1a0 APP/APP.o
+ .debug_loc     0x00000000000001a0       0x21 HAL/IO/LED/LED1/LED1_Interface.o
+ .debug_loc     0x00000000000001c1      0x164 HAL/IO/Motors/DC/DC_Interface.o
+ .debug_loc     0x0000000000000325       0x21 HAL/IO/Motors/SERVO/Servo_Interface.o
+ .debug_loc     0x0000000000000346      0x12b MCAL/ADC/ADC_Interface.o
+ .debug_loc     0x0000000000000471      0x628 MCAL/DIO/DIO_Interface.o
+ .debug_loc     0x0000000000000a99      0x583 MCAL/UART/UART_Interface.o
+ .debug_loc     0x000000000000101c      0x145 RTOS/SCR/list.o
+ .debug_loc     0x0000000000001161      0x2a0 RTOS/SCR/port.o
+ .debug_loc     0x0000000000001401     0x12a5 RTOS/SCR/tasks.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -1476,24 +1474,22 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000      0x488
+.debug_ranges   0x0000000000000000      0x3a0
  *(.debug_ranges)
- .debug_ranges  0x0000000000000000       0x18 APP/APP.o
- .debug_ranges  0x0000000000000018       0x28 HAL/IO/Buzzer/BUZZER_Interface.o
- .debug_ranges  0x0000000000000040       0x38 HAL/IO/LED/LED1/LED1_Interface.o
- .debug_ranges  0x0000000000000078       0x28 HAL/IO/LED/LED2/LED2_Interface.o
- .debug_ranges  0x00000000000000a0       0x28 HAL/IO/LED/LED3/LED3_Interface.o
- .debug_ranges  0x00000000000000c8       0x28 HAL/IO/Motors/DC/DC_Interface.o
- .debug_ranges  0x00000000000000f0       0x18 HAL/IO/Motors/SERVO/Servo_Interface.o
- .debug_ranges  0x0000000000000108       0x10 main.o
- .debug_ranges  0x0000000000000118       0x18 MCAL/ADC/ADC_Interface.o
- .debug_ranges  0x0000000000000130       0x58 MCAL/DIO/DIO_Interface.o
- .debug_ranges  0x0000000000000188       0x50 MCAL/UART/UART_Interface.o
- .debug_ranges  0x00000000000001d8       0x28 RTOS/SCR/heap_1.o
- .debug_ranges  0x0000000000000200       0x30 RTOS/SCR/list.o
- .debug_ranges  0x0000000000000230       0x40 RTOS/SCR/port.o
- .debug_ranges  0x0000000000000270       0xc8 RTOS/SCR/queue.o
- .debug_ranges  0x0000000000000338      0x150 RTOS/SCR/tasks.o
+ .debug_ranges  0x0000000000000000       0x20 APP/APP.o
+ .debug_ranges  0x0000000000000020       0x28 HAL/IO/Buzzer/BUZZER_Interface.o
+ .debug_ranges  0x0000000000000048       0x38 HAL/IO/LED/LED1/LED1_Interface.o
+ .debug_ranges  0x0000000000000080       0x28 HAL/IO/LED/LED2/LED2_Interface.o
+ .debug_ranges  0x00000000000000a8       0x28 HAL/IO/LED/LED3/LED3_Interface.o
+ .debug_ranges  0x00000000000000d0       0x28 HAL/IO/Motors/DC/DC_Interface.o
+ .debug_ranges  0x00000000000000f8       0x18 HAL/IO/Motors/SERVO/Servo_Interface.o
+ .debug_ranges  0x0000000000000110       0x10 main.o
+ .debug_ranges  0x0000000000000120       0x18 MCAL/ADC/ADC_Interface.o
+ .debug_ranges  0x0000000000000138       0x58 MCAL/DIO/DIO_Interface.o
+ .debug_ranges  0x0000000000000190       0x50 MCAL/UART/UART_Interface.o
+ .debug_ranges  0x00000000000001e0       0x30 RTOS/SCR/list.o
+ .debug_ranges  0x0000000000000210       0x40 RTOS/SCR/port.o
+ .debug_ranges  0x0000000000000250      0x150 RTOS/SCR/tasks.o
 
 .debug_macro
  *(.debug_macro)
@@ -1506,95 +1502,76 @@ LOAD data_init
  .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x3c C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega32.o
 
-.bss.speed      0x0000000000800683        0x2
- .bss.speed     0x0000000000800683        0x2 main.o
-                0x0000000000800683                speed
+.bss.speed      0x0000000000800084        0x2
+ .bss.speed     0x0000000000800084        0x2 APP/APP.o
+                0x0000000000800084                speed
 
 .bss.currentState
-                0x0000000000800695        0x1
+                0x0000000000800092        0x1
  .bss.currentState
-                0x0000000000800695        0x1 main.o
-                0x0000000000800695                currentState
+                0x0000000000800092        0x1 APP/APP.o
+                0x0000000000800092                currentState
 
 .bss.UART_Rdata
-                0x0000000000800685        0x2
+                0x0000000000800086        0x2
  .bss.UART_Rdata
-                0x0000000000800685        0x2 main.o
-                0x0000000000800685                UART_Rdata
+                0x0000000000800086        0x2 APP/APP.o
+                0x0000000000800086                UART_Rdata
 
-.bss.pucAlignedHeap.1961
-                0x0000000000800687        0x2
- .bss.pucAlignedHeap.1961
-                0x0000000000800687        0x2 RTOS/SCR/heap_1.o
-
-.bss.xNextFreeByte
-                0x0000000000800689        0x2
- .bss.xNextFreeByte
-                0x0000000000800689        0x2 RTOS/SCR/heap_1.o
-
-.bss.ucHeap     0x000000000080007a      0x5dc
- .bss.ucHeap    0x000000000080007a      0x5dc RTOS/SCR/heap_1.o
+.bss.DC_mach1   0x0000000000800093        0x1
+ .bss.DC_mach1  0x0000000000800093        0x1 APP/APP.o
+                0x0000000000800093                DC_mach1
 
 .bss.uxSchedulerSuspended
-                0x0000000000800696        0x1
+                0x0000000000800094        0x1
  .bss.uxSchedulerSuspended
-                0x0000000000800696        0x1 RTOS/SCR/tasks.o
+                0x0000000000800094        0x1 RTOS/SCR/tasks.o
 
 .bss.xNumOfOverflows
-                0x0000000000800697        0x1
+                0x0000000000800095        0x1
  .bss.xNumOfOverflows
-                0x0000000000800697        0x1 RTOS/SCR/tasks.o
+                0x0000000000800095        0x1 RTOS/SCR/tasks.o
 
 .bss.xYieldPending
-                0x0000000000800698        0x1
+                0x0000000000800096        0x1
  .bss.xYieldPending
-                0x0000000000800698        0x1 RTOS/SCR/tasks.o
+                0x0000000000800096        0x1 RTOS/SCR/tasks.o
 
 .bss.uxPendedTicks
-                0x0000000000800699        0x1
+                0x0000000000800097        0x1
  .bss.uxPendedTicks
-                0x0000000000800699        0x1 RTOS/SCR/tasks.o
+                0x0000000000800097        0x1 RTOS/SCR/tasks.o
 
 .bss.uxTopReadyPriority
-                0x000000000080069a        0x1
+                0x0000000000800098        0x1
  .bss.uxTopReadyPriority
-                0x000000000080069a        0x1 RTOS/SCR/tasks.o
+                0x0000000000800098        0x1 RTOS/SCR/tasks.o
 
 .bss.xTickCount
-                0x000000000080068d        0x2
+                0x000000000080008a        0x2
  .bss.xTickCount
-                0x000000000080068d        0x2 RTOS/SCR/tasks.o
-
-.bss.uxCurrentNumberOfTasks
-                0x000000000080069b        0x1
- .bss.uxCurrentNumberOfTasks
-                0x000000000080069b        0x1 RTOS/SCR/tasks.o
-
-.bss.xPendingReadyList
-                0x000000000080067a        0x9
- .bss.xPendingReadyList
-                0x000000000080067a        0x9 RTOS/SCR/tasks.o
+                0x000000000080008a        0x2 RTOS/SCR/tasks.o
 
 .bss.pxOverflowDelayedTaskList
-                0x000000000080068f        0x2
+                0x000000000080008c        0x2
  .bss.pxOverflowDelayedTaskList
-                0x000000000080068f        0x2 RTOS/SCR/tasks.o
+                0x000000000080008c        0x2 RTOS/SCR/tasks.o
 
 .bss.pxDelayedTaskList
-                0x0000000000800691        0x2
+                0x000000000080008e        0x2
  .bss.pxDelayedTaskList
-                0x0000000000800691        0x2 RTOS/SCR/tasks.o
+                0x000000000080008e        0x2 RTOS/SCR/tasks.o
 
 .bss.pxReadyTasksLists
-                0x0000000000800656       0x24
+                0x0000000000800060       0x24
  .bss.pxReadyTasksLists
-                0x0000000000800656       0x24 RTOS/SCR/tasks.o
+                0x0000000000800060       0x24 RTOS/SCR/tasks.o
 
 .bss.pxCurrentTCB
-                0x0000000000800693        0x2
+                0x0000000000800090        0x2
  .bss.pxCurrentTCB
-                0x0000000000800693        0x2 RTOS/SCR/tasks.o
-                0x0000000000800693                pxCurrentTCB
+                0x0000000000800090        0x2 RTOS/SCR/tasks.o
+                0x0000000000800090                pxCurrentTCB
 
 .text.xTaskIncrementTick
                 0x00000000000000ca      0x178
@@ -1603,345 +1580,292 @@ LOAD data_init
                 0x00000000000000ca                xTaskIncrementTick
 
 .text.handle_Mes
-                0x0000000000000242      0x132
+                0x0000000000000242      0x130
  .text.handle_Mes
-                0x0000000000000242      0x132 APP/APP.o
+                0x0000000000000242      0x130 APP/APP.o
                 0x0000000000000242                handle_Mes
 
 .text.UART_Initialize_WithoutInterrupt
-                0x0000000000000374      0x120
+                0x0000000000000372      0x120
  .text.UART_Initialize_WithoutInterrupt
-                0x0000000000000374      0x120 MCAL/UART/UART_Interface.o
-                0x0000000000000374                UART_Initialize_WithoutInterrupt
+                0x0000000000000372      0x120 MCAL/UART/UART_Interface.o
+                0x0000000000000372                UART_Initialize_WithoutInterrupt
 
 .text.DIO_SetPinDirection
-                0x0000000000000494       0xe2
+                0x0000000000000492       0xe2
  .text.DIO_SetPinDirection
-                0x0000000000000494       0xe2 MCAL/DIO/DIO_Interface.o
-                0x0000000000000494                DIO_SetPinDirection
+                0x0000000000000492       0xe2 MCAL/DIO/DIO_Interface.o
+                0x0000000000000492                DIO_SetPinDirection
 
 .text.DIO_SetPinValue
-                0x0000000000000576       0xe2
+                0x0000000000000574       0xe2
  .text.DIO_SetPinValue
-                0x0000000000000576       0xe2 MCAL/DIO/DIO_Interface.o
-                0x0000000000000576                DIO_SetPinValue
-
-.text.xTaskResumeAll
-                0x0000000000000658       0xe2
- .text.xTaskResumeAll
-                0x0000000000000658       0xe2 RTOS/SCR/tasks.o
-                0x0000000000000658                xTaskResumeAll
+                0x0000000000000574       0xe2 MCAL/DIO/DIO_Interface.o
+                0x0000000000000574                DIO_SetPinValue
 
 .text.vPortYieldFromTick
-                0x000000000000073a       0xb8
+                0x0000000000000656       0xb8
  .text.vPortYieldFromTick
-                0x000000000000073a       0xb8 RTOS/SCR/port.o
-                0x000000000000073a                vPortYieldFromTick
+                0x0000000000000656       0xb8 RTOS/SCR/port.o
+                0x0000000000000656                vPortYieldFromTick
 
 .text.vTaskSwitchContext
-                0x00000000000007f2       0xb8
+                0x000000000000070e       0xb8
  .text.vTaskSwitchContext
-                0x00000000000007f2       0xb8 RTOS/SCR/tasks.o
-                0x00000000000007f2                vTaskSwitchContext
+                0x000000000000070e       0xb8 RTOS/SCR/tasks.o
+                0x000000000000070e                vTaskSwitchContext
 
-.text.vPortYield
-                0x00000000000008aa       0xb2
- .text.vPortYield
-                0x00000000000008aa       0xb2 RTOS/SCR/port.o
-                0x00000000000008aa                vPortYield
-
-.text.main      0x000000000000095c       0xa6
- .text.main     0x000000000000095c       0xa6 main.o
-                0x000000000000095c                main
-
-.text.xTaskRemoveFromEventList
-                0x0000000000000a02       0x98
- .text.xTaskRemoveFromEventList
-                0x0000000000000a02       0x98 RTOS/SCR/tasks.o
-                0x0000000000000a02                xTaskRemoveFromEventList
-
-.text.DC_Start  0x0000000000000a9a       0x94
+.text.DC_Start  0x00000000000007c6       0x94
  .text.DC_Start
-                0x0000000000000a9a       0x94 HAL/IO/Motors/DC/DC_Interface.o
-                0x0000000000000a9a                DC_Start
+                0x00000000000007c6       0x94 HAL/IO/Motors/DC/DC_Interface.o
+                0x00000000000007c6                DC_Start
 
-.text.xQueueGenericReset
-                0x0000000000000b2e       0x8e
- .text.xQueueGenericReset
-                0x0000000000000b2e       0x8e RTOS/SCR/queue.o
-                0x0000000000000b2e                xQueueGenericReset
+.text           0x000000000000085a       0x7a
+ .text          0x000000000000085a       0x7a c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libm.a(floatsisf.o)
+                0x000000000000085a                __floatunsisf
+                0x000000000000085e                __floatsisf
 
-.text           0x0000000000000bbc       0x7a
- .text          0x0000000000000bbc       0x7a c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libm.a(floatsisf.o)
-                0x0000000000000bbc                __floatunsisf
-                0x0000000000000bc0                __floatsisf
-
-.text.ADC_Read  0x0000000000000c36       0x74
+.text.ADC_Read  0x00000000000008d4       0x74
  .text.ADC_Read
-                0x0000000000000c36       0x74 MCAL/ADC/ADC_Interface.o
-                0x0000000000000c36                ADC_Read
-
-.text.pvPortMalloc
-                0x0000000000000caa       0x6a
- .text.pvPortMalloc
-                0x0000000000000caa       0x6a RTOS/SCR/heap_1.o
-                0x0000000000000caa                pvPortMalloc
-
-.text.xQueueGenericCreate
-                0x0000000000000d14       0x5c
- .text.xQueueGenericCreate
-                0x0000000000000d14       0x5c RTOS/SCR/queue.o
-                0x0000000000000d14                xQueueGenericCreate
+                0x00000000000008d4       0x74 MCAL/ADC/ADC_Interface.o
+                0x00000000000008d4                ADC_Read
 
 .text.DC_Initialize
-                0x0000000000000d70       0x50
+                0x0000000000000948       0x50
  .text.DC_Initialize
-                0x0000000000000d70       0x50 HAL/IO/Motors/DC/DC_Interface.o
-                0x0000000000000d70                DC_Initialize
+                0x0000000000000948       0x50 HAL/IO/Motors/DC/DC_Interface.o
+                0x0000000000000948                DC_Initialize
 
-.text.DC_Stop   0x0000000000000dc0       0x4c
- .text.DC_Stop  0x0000000000000dc0       0x4c HAL/IO/Motors/DC/DC_Interface.o
-                0x0000000000000dc0                DC_Stop
+.text.App_Init  0x0000000000000998       0x4e
+ .text.App_Init
+                0x0000000000000998       0x4e APP/APP.o
+                0x0000000000000998                App_Init
+
+.text.DC_Stop   0x00000000000009e6       0x4e
+ .text.DC_Stop  0x00000000000009e6       0x4e HAL/IO/Motors/DC/DC_Interface.o
+                0x00000000000009e6                DC_Stop
 
 .text.uxListRemove
-                0x0000000000000e0c       0x4c
+                0x0000000000000a34       0x4c
  .text.uxListRemove
-                0x0000000000000e0c       0x4c RTOS/SCR/list.o
-                0x0000000000000e0c                uxListRemove
+                0x0000000000000a34       0x4c RTOS/SCR/list.o
+                0x0000000000000a34                uxListRemove
 
 .text.UART_Receive_Word
-                0x0000000000000e58       0x4a
+                0x0000000000000a80       0x4a
  .text.UART_Receive_Word
-                0x0000000000000e58       0x4a MCAL/UART/UART_Interface.o
-                0x0000000000000e58                UART_Receive_Word
+                0x0000000000000a80       0x4a MCAL/UART/UART_Interface.o
+                0x0000000000000a80                UART_Receive_Word
 
-.text           0x0000000000000ea2       0x48
- .text          0x0000000000000ea2       0x48 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libm.a(fp_cmp.o)
-                0x0000000000000ea2                __fp_cmp
+.text           0x0000000000000aca       0x48
+ .text          0x0000000000000aca       0x48 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libm.a(fp_cmp.o)
+                0x0000000000000aca                __fp_cmp
 
 .text.libgcc.div
-                0x0000000000000eea       0x44
+                0x0000000000000b12       0x44
  .text.libgcc.div
-                0x0000000000000eea       0x44 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_udivmodsi4.o)
-                0x0000000000000eea                __udivmodsi4
+                0x0000000000000b12       0x44 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_udivmodsi4.o)
+                0x0000000000000b12                __udivmodsi4
 
 .text.vListInsertEnd
-                0x0000000000000f2e       0x42
+                0x0000000000000b56       0x42
  .text.vListInsertEnd
-                0x0000000000000f2e       0x42 RTOS/SCR/list.o
-                0x0000000000000f2e                vListInsertEnd
+                0x0000000000000b56       0x42 RTOS/SCR/list.o
+                0x0000000000000b56                vListInsertEnd
 
 .text.prvResetNextTaskUnblockTime
-                0x0000000000000f70       0x3e
+                0x0000000000000b98       0x3e
  .text.prvResetNextTaskUnblockTime
-                0x0000000000000f70       0x3e RTOS/SCR/tasks.o
+                0x0000000000000b98       0x3e RTOS/SCR/tasks.o
 
-.text.libgcc.div
-                0x0000000000000fae       0x2e
- .text.libgcc.div
-                0x0000000000000fae       0x2e c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_divmodsi4.o)
-                0x0000000000000fae                __divmodsi4
+.text.main      0x0000000000000bd6       0x3a
+ .text.main     0x0000000000000bd6       0x3a main.o
+                0x0000000000000bd6                main
 
 .text.DC_Change_Speed
-                0x0000000000000fdc       0x24
+                0x0000000000000c10       0x2e
  .text.DC_Change_Speed
-                0x0000000000000fdc       0x24 HAL/IO/Motors/DC/DC_Interface.o
-                0x0000000000000fdc                DC_Change_Speed
-
-.text.ServoMotor_Initialize
-                0x0000000000001000       0x20
- .text.ServoMotor_Initialize
-                0x0000000000001000       0x20 HAL/IO/Motors/SERVO/Servo_Interface.o
-                0x0000000000001000                ServoMotor_Initialize
-
-.text.vListInitialise
-                0x0000000000001020       0x1c
- .text.vListInitialise
-                0x0000000000001020       0x1c RTOS/SCR/list.o
-                0x0000000000001020                vListInitialise
-
-.text.ServoMotor_Rotate
-                0x000000000000103c       0x1a
- .text.ServoMotor_Rotate
-                0x000000000000103c       0x1a HAL/IO/Motors/SERVO/Servo_Interface.o
-                0x000000000000103c                ServoMotor_Rotate
-
-.text.exit      0x0000000000001056       0x16
- .text.exit     0x0000000000001056       0x16 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
-                0x0000000000001056                exit
+                0x0000000000000c10       0x2e HAL/IO/Motors/DC/DC_Interface.o
+                0x0000000000000c10                DC_Change_Speed
 
 .text.libgcc.div
-                0x000000000000106c       0x10
+                0x0000000000000c3e       0x2e
  .text.libgcc.div
-                0x000000000000106c       0x10 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_negsi2.o)
-                0x000000000000106c                __negsi2
+                0x0000000000000c3e       0x2e c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_divmodsi4.o)
+                0x0000000000000c3e                __divmodsi4
 
-.text.libgcc    0x000000000000107c       0x10
- .text.libgcc   0x000000000000107c       0x10 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_xload_2.o)
-                0x000000000000107c                __xload_2
+.text.ServoMotor_Initialize
+                0x0000000000000c6c       0x22
+ .text.ServoMotor_Initialize
+                0x0000000000000c6c       0x22 HAL/IO/Motors/SERVO/Servo_Interface.o
+                0x0000000000000c6c                ServoMotor_Initialize
+
+.text.exit      0x0000000000000c8e       0x16
+ .text.exit     0x0000000000000c8e       0x16 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
+                0x0000000000000c8e                exit
+
+.text.ServoMotor_Rotate
+                0x0000000000000ca4       0x12
+ .text.ServoMotor_Rotate
+                0x0000000000000ca4       0x12 HAL/IO/Motors/SERVO/Servo_Interface.o
+                0x0000000000000ca4                ServoMotor_Rotate
+
+.text.libgcc.div
+                0x0000000000000cb6       0x10
+ .text.libgcc.div
+                0x0000000000000cb6       0x10 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_negsi2.o)
+                0x0000000000000cb6                __negsi2
 
 .text.ADC_Initialize
-                0x000000000000108c        0xe
+                0x0000000000000cc6        0xe
  .text.ADC_Initialize
-                0x000000000000108c        0xe MCAL/ADC/ADC_Interface.o
-                0x000000000000108c                ADC_Initialize
+                0x0000000000000cc6        0xe MCAL/ADC/ADC_Interface.o
+                0x0000000000000cc6                ADC_Initialize
 
 .text.UART_Receive_Character
-                0x000000000000109a        0xe
+                0x0000000000000cd4        0xe
  .text.UART_Receive_Character
-                0x000000000000109a        0xe MCAL/UART/UART_Interface.o
-                0x000000000000109a                UART_Receive_Character
+                0x0000000000000cd4        0xe MCAL/UART/UART_Interface.o
+                0x0000000000000cd4                UART_Receive_Character
 
 .text.BUZZER_Initialize
-                0x00000000000010a8        0xc
+                0x0000000000000ce2        0xc
  .text.BUZZER_Initialize
-                0x00000000000010a8        0xc HAL/IO/Buzzer/BUZZER_Interface.o
-                0x00000000000010a8                BUZZER_Initialize
+                0x0000000000000ce2        0xc HAL/IO/Buzzer/BUZZER_Interface.o
+                0x0000000000000ce2                BUZZER_Initialize
 
 .text.BUZZER_ON
-                0x00000000000010b4        0xc
+                0x0000000000000cee        0xc
  .text.BUZZER_ON
-                0x00000000000010b4        0xc HAL/IO/Buzzer/BUZZER_Interface.o
-                0x00000000000010b4                BUZZER_ON
+                0x0000000000000cee        0xc HAL/IO/Buzzer/BUZZER_Interface.o
+                0x0000000000000cee                BUZZER_ON
 
 .text.BUZZER_OFF
-                0x00000000000010c0        0xc
+                0x0000000000000cfa        0xc
  .text.BUZZER_OFF
-                0x00000000000010c0        0xc HAL/IO/Buzzer/BUZZER_Interface.o
-                0x00000000000010c0                BUZZER_OFF
+                0x0000000000000cfa        0xc HAL/IO/Buzzer/BUZZER_Interface.o
+                0x0000000000000cfa                BUZZER_OFF
 
 .text.LED1_Initialize
-                0x00000000000010cc        0xc
+                0x0000000000000d06        0xc
  .text.LED1_Initialize
-                0x00000000000010cc        0xc HAL/IO/LED/LED1/LED1_Interface.o
-                0x00000000000010cc                LED1_Initialize
+                0x0000000000000d06        0xc HAL/IO/LED/LED1/LED1_Interface.o
+                0x0000000000000d06                LED1_Initialize
 
-.text.LED1_ON   0x00000000000010d8        0xc
- .text.LED1_ON  0x00000000000010d8        0xc HAL/IO/LED/LED1/LED1_Interface.o
-                0x00000000000010d8                LED1_ON
+.text.LED1_ON   0x0000000000000d12        0xc
+ .text.LED1_ON  0x0000000000000d12        0xc HAL/IO/LED/LED1/LED1_Interface.o
+                0x0000000000000d12                LED1_ON
 
-.text.LED1_OFF  0x00000000000010e4        0xc
+.text.LED1_OFF  0x0000000000000d1e        0xc
  .text.LED1_OFF
-                0x00000000000010e4        0xc HAL/IO/LED/LED1/LED1_Interface.o
-                0x00000000000010e4                LED1_OFF
+                0x0000000000000d1e        0xc HAL/IO/LED/LED1/LED1_Interface.o
+                0x0000000000000d1e                LED1_OFF
 
 .text.LED2_Initialize
-                0x00000000000010f0        0xc
+                0x0000000000000d2a        0xc
  .text.LED2_Initialize
-                0x00000000000010f0        0xc HAL/IO/LED/LED2/LED2_Interface.o
-                0x00000000000010f0                LED2_Initialize
+                0x0000000000000d2a        0xc HAL/IO/LED/LED2/LED2_Interface.o
+                0x0000000000000d2a                LED2_Initialize
 
-.text.LED2_ON   0x00000000000010fc        0xc
- .text.LED2_ON  0x00000000000010fc        0xc HAL/IO/LED/LED2/LED2_Interface.o
-                0x00000000000010fc                LED2_ON
+.text.LED2_ON   0x0000000000000d36        0xc
+ .text.LED2_ON  0x0000000000000d36        0xc HAL/IO/LED/LED2/LED2_Interface.o
+                0x0000000000000d36                LED2_ON
 
-.text.LED2_OFF  0x0000000000001108        0xc
+.text.LED2_OFF  0x0000000000000d42        0xc
  .text.LED2_OFF
-                0x0000000000001108        0xc HAL/IO/LED/LED2/LED2_Interface.o
-                0x0000000000001108                LED2_OFF
+                0x0000000000000d42        0xc HAL/IO/LED/LED2/LED2_Interface.o
+                0x0000000000000d42                LED2_OFF
 
 .text.LED3_Initialize
-                0x0000000000001114        0xc
+                0x0000000000000d4e        0xc
  .text.LED3_Initialize
-                0x0000000000001114        0xc HAL/IO/LED/LED3/LED3_Interface.o
-                0x0000000000001114                LED3_Initialize
+                0x0000000000000d4e        0xc HAL/IO/LED/LED3/LED3_Interface.o
+                0x0000000000000d4e                LED3_Initialize
 
-.text.LED3_ON   0x0000000000001120        0xc
- .text.LED3_ON  0x0000000000001120        0xc HAL/IO/LED/LED3/LED3_Interface.o
-                0x0000000000001120                LED3_ON
+.text.LED3_ON   0x0000000000000d5a        0xc
+ .text.LED3_ON  0x0000000000000d5a        0xc HAL/IO/LED/LED3/LED3_Interface.o
+                0x0000000000000d5a                LED3_ON
 
-.text.LED3_OFF  0x000000000000112c        0xc
+.text.LED3_OFF  0x0000000000000d66        0xc
  .text.LED3_OFF
-                0x000000000000112c        0xc HAL/IO/LED/LED3/LED3_Interface.o
-                0x000000000000112c                LED3_OFF
+                0x0000000000000d66        0xc HAL/IO/LED/LED3/LED3_Interface.o
+                0x0000000000000d66                LED3_OFF
 
-.text.vTaskSuspendAll
-                0x0000000000001138        0xc
- .text.vTaskSuspendAll
-                0x0000000000001138        0xc RTOS/SCR/tasks.o
-                0x0000000000001138                vTaskSuspendAll
-
-.text.libgcc    0x0000000000001144        0xc
- .text.libgcc   0x0000000000001144        0xc c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_tablejump2.o)
-                0x0000000000001144                __tablejump2__
+.text.libgcc    0x0000000000000d72        0xc
+ .text.libgcc   0x0000000000000d72        0xc c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_tablejump2.o)
+                0x0000000000000d72                __tablejump2__
 
 .text.Reassemble_uint16
-                0x0000000000001150        0xa
+                0x0000000000000d7e        0xa
  .text.Reassemble_uint16
-                0x0000000000001150        0xa MCAL/UART/UART_Interface.o
-                0x0000000000001150                Reassemble_uint16
+                0x0000000000000d7e        0xa MCAL/UART/UART_Interface.o
+                0x0000000000000d7e                Reassemble_uint16
 
-.text           0x000000000000115a        0xa
- .text          0x000000000000115a        0xa c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libm.a(cmpsf2.o)
-                0x000000000000115a                __nesf2
-                0x000000000000115a                __eqsf2
-                0x000000000000115a                __cmpsf2
-                0x000000000000115a                __ltsf2
-                0x000000000000115a                __lesf2
+.text           0x0000000000000d88        0xa
+ .text          0x0000000000000d88        0xa c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libm.a(cmpsf2.o)
+                0x0000000000000d88                __nesf2
+                0x0000000000000d88                __eqsf2
+                0x0000000000000d88                __cmpsf2
+                0x0000000000000d88                __ltsf2
+                0x0000000000000d88                __lesf2
 
-.text           0x0000000000001164        0xa
- .text          0x0000000000001164        0xa c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libm.a(gesf2.o)
-                0x0000000000001164                __gesf2
-                0x0000000000001164                __gtsf2
+.text           0x0000000000000d92        0xa
+ .text          0x0000000000000d92        0xa c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libm.a(gesf2.o)
+                0x0000000000000d92                __gesf2
+                0x0000000000000d92                __gtsf2
 
 .text.__vector_7
-                0x000000000000116e        0x6
+                0x0000000000000d9c        0x6
  .text.__vector_7
-                0x000000000000116e        0x6 RTOS/SCR/port.o
-                0x000000000000116e                __vector_7
+                0x0000000000000d9c        0x6 RTOS/SCR/port.o
+                0x0000000000000d9c                __vector_7
 
-.text           0x0000000000001174        0x4
- .text          0x0000000000001174        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega32.o
-                0x0000000000001174                __vector_1
-                0x0000000000001174                __vector_12
-                0x0000000000001174                __bad_interrupt
-                0x0000000000001174                __vector_6
-                0x0000000000001174                __vector_3
-                0x0000000000001174                __vector_11
-                0x0000000000001174                __vector_13
-                0x0000000000001174                __vector_17
-                0x0000000000001174                __vector_19
-                0x0000000000001174                __vector_5
-                0x0000000000001174                __vector_4
-                0x0000000000001174                __vector_9
-                0x0000000000001174                __vector_2
-                0x0000000000001174                __vector_15
-                0x0000000000001174                __vector_8
-                0x0000000000001174                __vector_14
-                0x0000000000001174                __vector_10
-                0x0000000000001174                __vector_16
-                0x0000000000001174                __vector_18
-                0x0000000000001174                __vector_20
+.text           0x0000000000000da2        0x4
+ .text          0x0000000000000da2        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega32.o
+                0x0000000000000da2                __vector_1
+                0x0000000000000da2                __vector_12
+                0x0000000000000da2                __bad_interrupt
+                0x0000000000000da2                __vector_6
+                0x0000000000000da2                __vector_3
+                0x0000000000000da2                __vector_11
+                0x0000000000000da2                __vector_13
+                0x0000000000000da2                __vector_17
+                0x0000000000000da2                __vector_19
+                0x0000000000000da2                __vector_5
+                0x0000000000000da2                __vector_4
+                0x0000000000000da2                __vector_9
+                0x0000000000000da2                __vector_2
+                0x0000000000000da2                __vector_15
+                0x0000000000000da2                __vector_8
+                0x0000000000000da2                __vector_14
+                0x0000000000000da2                __vector_10
+                0x0000000000000da2                __vector_16
+                0x0000000000000da2                __vector_18
+                0x0000000000000da2                __vector_20
 
-.text._Exit     0x0000000000001178        0x4
- .text._Exit    0x0000000000001178        0x4 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(_Exit.o)
-                0x0000000000001178                _Exit
-
-.text.vPortFree
-                0x000000000000117c        0x2
- .text.vPortFree
-                0x000000000000117c        0x2 RTOS/SCR/heap_1.o
-                0x000000000000117c                vPortFree
+.text._Exit     0x0000000000000da6        0x4
+ .text._Exit    0x0000000000000da6        0x4 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(_Exit.o)
+                0x0000000000000da6                _Exit
 
 .text.__dummy_fini
-                0x000000000000117e        0x2
+                0x0000000000000daa        0x2
  .text.__dummy_fini
-                0x000000000000117e        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
-                0x000000000000117e                _fini
+                0x0000000000000daa        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
+                0x0000000000000daa                _fini
 
 .text.__dummy_funcs_on_exit
-                0x0000000000001180        0x2
+                0x0000000000000dac        0x2
  .text.__dummy_funcs_on_exit
-                0x0000000000001180        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
-                0x0000000000001180                __funcs_on_exit
+                0x0000000000000dac        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
+                0x0000000000000dac                __funcs_on_exit
 
 .text.__dummy_simulator_exit
-                0x0000000000001182        0x2
+                0x0000000000000dae        0x2
  .text.__dummy_simulator_exit
-                0x0000000000001182        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
-                0x0000000000001182                __simulator_exit
+                0x0000000000000dae        0x2 c:/program files/microchip/xc8/v2.36/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
+                0x0000000000000dae                __simulator_exit
 
 .data.xNextTaskUnblockTime
-                0x000000000080068b        0x2 load address 0x0000000000001184
+                0x0000000000800088        0x2 load address 0x0000000000000db0
  .data.xNextTaskUnblockTime
-                0x000000000080068b        0x2 RTOS/SCR/tasks.o
+                0x0000000000800088        0x2 RTOS/SCR/tasks.o

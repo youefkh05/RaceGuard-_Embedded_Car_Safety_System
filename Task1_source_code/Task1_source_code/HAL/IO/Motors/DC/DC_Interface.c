@@ -85,7 +85,7 @@ void DC_Stop(dc_motor motor)
 void DC_Change_Speed(dc_motor motor,uint16_t speed)
 {	switch (motor){
 		case DC_Motor1:
-			OCR1A = speed/4;
+			OCR1A = speed;
 		break;
 		case DC_Motor2:
 			OCR1B = speed/4;
