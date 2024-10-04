@@ -54,7 +54,6 @@ void Free_RTOS_Init(void);
 
 /*	Tasks	*/
 void uart(void *par);
-void pot(void *par);
 void tmp(void *par);
 void eestate(void *par);
 void fan1(void *par);

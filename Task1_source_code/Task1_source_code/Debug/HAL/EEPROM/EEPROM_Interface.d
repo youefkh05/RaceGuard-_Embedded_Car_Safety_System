@@ -29,7 +29,9 @@ HAL/EEPROM/EEPROM_Interface.d HAL/EEPROM/EEPROM_Interface.o: \
  ../MCAL/ADC/ADC_Configuration.h ../MCAL/ADC/ADC_Address.h \
  ../MCAL/UART/UART_Private.h ../MCAL/UART/UART_Configurations.h \
  ../MCAL/WatchDog/WatchDog_Private.h \
- ../HAL/Configurations/MODULE_LIBRARY.h ../HAL/IO/LED/LED1/LED1_Private.h \
+ ../HAL/Configurations/MODULE_LIBRARY.h ../HAL/IO/LCD/LCD_Interface.h \
+ ../HAL/IO/LCD/LCD_Config.h ../HAL/IO/LCD/LCD_private.h \
+ ../HAL/IO/LCD/LCD_Interface.h ../HAL/IO/LED/LED1/LED1_Private.h \
  ../HAL/IO/LED/LED1/LED1_Configuration.h \
  ../HAL/IO/LED/LED2/LED2_Private.h \
  ../HAL/IO/LED/LED2/LED2_Configuration.h \
@@ -110,6 +112,14 @@ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\math.h:
 ../MCAL/WatchDog/WatchDog_Private.h:
 
 ../HAL/Configurations/MODULE_LIBRARY.h:
+
+../HAL/IO/LCD/LCD_Interface.h:
+
+../HAL/IO/LCD/LCD_Config.h:
+
+../HAL/IO/LCD/LCD_private.h:
+
+../HAL/IO/LCD/LCD_Interface.h:
 
 ../HAL/IO/LED/LED1/LED1_Private.h:
 

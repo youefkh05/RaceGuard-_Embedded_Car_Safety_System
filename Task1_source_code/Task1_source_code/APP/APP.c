@@ -27,6 +27,7 @@ uint8_t Speed_Scale=100;
 /*		Semaphore		*/
 xSemaphoreHandle Bot1_Semaphore;
 xSemaphoreHandle Emer_Semaphore;
+xSemaphoreHandle LCD_Semaphore;
 
 /*		Tasks		*/
 TaskHandle_t xHanleTMP;
@@ -43,6 +44,7 @@ void App_Init(void){
 	Initialize_E2PROM_State();
 	Initialize_TEMP_SENSOR();
 	ADC_Initialize(AVCC,ADC_PRE0);
+	LCD_voidInit();
 	LED1_Initialize();
 	LED1_OFF();
 	
@@ -70,6 +72,9 @@ void Free_RTOS_Init(void){
 	/*		Semaphore		*/
 	Bot1_Semaphore=xSemaphoreCreateBinary();
 	xSemaphoreTake(Bot1_Semaphore, 0);
+	
+	LCD_Semaphore=xSemaphoreCreateBinary();
+	xSemaphoreGive(LCD_Semaphore);
 	
 	Emer_Semaphore=xSemaphoreCreateBinary();
 	xSemaphoreTake(Emer_Semaphore, 0);
@@ -228,29 +233,20 @@ void pot(void *par){
 */
 
 void tmp(void *par){
-	static uint16_t tmp_rd=0;
-	/*
-	LCD_voidGoToXY(1,0);
-	LCD_voidWriteString((uint8_t*)"TMP:");
-	*/
+	
 	while(1){
-		/*
-		if (xSemaphoreTake(LCD_Semaphore, 5000) == pdTRUE)
-		{
+		temperature=Read_TEMP_SENSOR();
+		if (xSemaphoreTake(LCD_Semaphore, 10) == pdTRUE){
+			LCD_voidGoToXY(1,0);
+			LCD_voidWriteString((uint8_t*)"TMP:");
 			LCD_voidGoToXY(1,4);
-			LCD_voidWriteString((uint8_t *)"     ");
-			tmp_rd=Read_TEMP_SENSOR();
+			LCD_voidWriteString((uint8_t *)"          ");
 			LCD_voidGoToXY(1,4);
-			LCD_voidWriteNumber(tmp_rd);
+			LCD_voidWriteNumber(temperature);
 			LCD_voidWriteString((uint8_t *)"C");
 			xSemaphoreGive(LCD_Semaphore);
-			vTaskDelay(200);
 		}
-		else{
-			
-		}
-		*/
-		temperature=Read_TEMP_SENSOR();
+		
 		if(temperature>=Emergecy_Max_Temp){
 			if (0==emergency_flag)	//enter emergency	
 			{
@@ -298,6 +294,15 @@ void fan1(void *par){
 
 	while(1){
 		handle_State(temperature,DC_fan1,Speed_Scale,&currentState,&reset);
+		if (xSemaphoreTake(LCD_Semaphore, 10) == pdTRUE){
+			LCD_voidGoToXY(0,0);
+			//LCD_voidWriteString((uint8_t*)"SPD:");
+			LCD_voidGoToXY(0,4);
+			LCD_voidWriteString((uint8_t *)"          ");
+			LCD_voidGoToXY(0,4);
+			LCD_voidWriteNumber((temperature*100)/60);
+			xSemaphoreGive(LCD_Semaphore);
+		}
 		vTaskDelay(pdMS_TO_TICKS(80));
 	}
 }

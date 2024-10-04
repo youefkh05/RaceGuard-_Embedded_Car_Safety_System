@@ -9,6 +9,7 @@
 #ifndef MODULE_LIBRARY_H_
 #define MODULE_LIBRARY_H_
 
+#include "LCD_Interface.h"
 
 #include "LED1_Private.h"
 #include "LED2_Private.h"
