@@ -32,21 +32,21 @@ void App_Init(void){
 	
 	//Start the machine
 	ServoMotor_Rotate(90);
-	DC_Start(DC_mach1,DC_CW);
+	DC_Start(DC_mach1,DC_CW,speed);
 }
 
-void handle_Mes(temp T,dc_motor DC_MOT, E2PROM_State* S){
+void handle_Mes(temp T,dc_motor DC_MOT,uint16_t speed, E2PROM_State* S){
 	
 	// off all LED and Buzzer
 	LED1_OFF();
 	LED2_OFF();
 	LED3_OFF();
 	BUZZER_OFF();
-	DC_Start(DC_MOT,DC_CW);
+	DC_Start(DC_MOT,DC_CW,speed);
 	
 	if(T<=20.0){
 		LED3_ON();
-		*S=Normal_state;
+		*S=Normal_state;	
 	}
 	else if (T>20.0 && T<=40.0){
 		LED2_ON();

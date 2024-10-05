@@ -35,7 +35,7 @@ typedef enum
 void App_Init(void);
 
 /* handlers	*/
-void handle_Mes(temp T,dc_motor DC_MOT, E2PROM_State* S);
+void handle_Mes(temp T,dc_motor DC_MOT,uint16_t speed, E2PROM_State* S);
 
 /* Sender	*/
 void UART_Transmit_Speed(uint16_t speed);

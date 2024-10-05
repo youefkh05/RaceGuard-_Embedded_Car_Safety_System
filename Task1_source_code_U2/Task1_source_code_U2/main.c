@@ -28,7 +28,9 @@ int main(void)
 		UART_Receive_Word(&UART_Rdata);
 		
 		speed=ADC_Read(POT1_PIN);
-		
+		if(Off_Mes==UART_Rdata){
+			speed=0;
+		}
 		DC_Change_Speed(DC_mach1,speed);
 		/*
 		//Send the message (Speed)	
@@ -36,7 +38,7 @@ int main(void)
 		*/
 		
 		/* Handle the message	*/
-		handle_Mes(UART_Rdata,DC_mach1,&currentState);
+		handle_Mes(UART_Rdata,DC_mach1,speed,&currentState);
     }
 }
 

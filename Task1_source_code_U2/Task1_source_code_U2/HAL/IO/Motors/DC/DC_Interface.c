@@ -27,13 +27,13 @@ void DC_Initialize(dc_motor motor)
 	
 }
 
-void DC_Start(dc_motor motor, dc_motor_direction direction)
+void DC_Start(dc_motor motor, dc_motor_direction direction, uint16_t speed)
 {	
 	switch(motor)
 	{
 		case DC_Motor1:
 		DIO_SetPinValue(DC_Enable_Port, DC_Enable1_Pin, DC_HIGH);
-		OCR0=125;
+		OCR0 =(speed *250)/ 1024;
 		switch(direction)
 		{
 			case DC_CW:
@@ -68,7 +68,7 @@ void DC_Stop(dc_motor motor)
 	switch(motor)
 	{
 		case DC_Motor1:
-		OCR1B = 0;
+		OCR0 = 0;
 		DIO_SetPinValue(DC_Enable_Port, DC_Enable1_Pin, DC_LOW);
 		DIO_SetPinValue(DC_Motor_Port, DC_Motor1_A1, DC_LOW);
 		DIO_SetPinValue(DC_Motor_Port, DC_Motor1_A2, DC_LOW);
@@ -84,7 +84,7 @@ void DC_Stop(dc_motor motor)
 void DC_Change_Speed(dc_motor motor,uint16_t speed)
 {	switch (motor){
 		case DC_Motor1:
-			OCR0 =(speed *100)/ 1024;
+			OCR0 =(speed *250)/ 1024;
 		break;
 		case DC_Motor2:
 			OCR1A = speed/4;

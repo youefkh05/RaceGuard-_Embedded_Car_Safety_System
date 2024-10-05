@@ -3,9 +3,9 @@
  <FRAME activewindow="0">
   <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff8c0000000d000000f40600002b040000</PLACEMENT>
   <WINDOW type="default" module="ISIS">
-   <editor metric="0" gridmajor="2540000" mode="00000010" zoom="0" scale="108" flipped="0" gridminor="254000" gridmode="32" snapidx="2" snap="254000" xcursor="16" orgmode="0" snaprange="127000">
+   <editor metric="0" gridmajor="2540000" mode="00000000" zoom="0" scale="108" flipped="0" gridminor="254000" gridmode="32" snapidx="2" snap="254000" xcursor="16" orgmode="0" snaprange="127000">
     <world y1="-15240000" x1="-20320000" y2="15240000" x2="20320000"/>
-    <centre x="-4064000" y="3810000"/>
+    <centre x="5080000" y="1814285"/>
     <origin x="0" y="0"/>
    </editor>
   </WINDOW>
@@ -17,10 +17,17 @@
    <origin x="0" y="0"/>
   </editor>
  </MODULE>
+ <MODULE name="GVIEW">
+  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="82" flipped="0" gridminor="254000" gridmode="32" snapidx="3" snap="127000" xcursor="0" orgmode="0" snaprange="154878">
+   <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
+   <centre x="0" y="15119"/>
+   <origin x="0" y="0"/>
+  </editor>
+ </MODULE>
  <MODULE name="ISIS">
-  <editor metric="0" gridmajor="2540000" mode="00000010" zoom="0" scale="108" flipped="0" gridminor="254000" gridmode="32" snapidx="2" snap="254000" xcursor="16" orgmode="0" snaprange="127000">
+  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="0" scale="108" flipped="0" gridminor="254000" gridmode="32" snapidx="2" snap="254000" xcursor="16" orgmode="0" snaprange="127000">
    <world y1="-15240000" x1="-20320000" y2="15240000" x2="20320000"/>
-   <centre x="-4064000" y="3810000"/>
+   <centre x="5080000" y="1814285"/>
    <origin x="0" y="0"/>
   </editor>
  </MODULE>
@@ -35,28 +42,32 @@
      <ITEM name="Version">100</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="644" x="1144" flags="00008033" y="713" h="355" pid="1" iid="-1">
+   <POPUP w="369" x="1443" flags="00008033" y="715" h="333" pid="1" iid="-1">
     <PROPERTIES>
-     <ITEM name="Address Column Width">82</ITEM>
+     <ITEM name="Address Column Width">0</ITEM>
      <ITEM name="AutoResize">No</ITEM>
      <ITEM name="Gridlines">Yes</ITEM>
-     <ITEM name="Item 0">"UART_Rdata","008006D1",00000002,0000000E,1745,2,4,00000003,0,00000000,00000000</ITEM>
-     <ITEM name="Item 1">"speed_scale","008006CF",00000002,0000000E,1743,2,4,00000003,0,00000000,00000000</ITEM>
-     <ITEM name="Item 2">"speed","00800084",00000002,0000000E,132,2,4,00000003,0,00000000,00000000</ITEM>
-     <ITEM name="Item 3">"speed_scale","008006CF",00000002,0000000E,1743,2,4,00000003,0,00000000,00000000</ITEM>
+     <ITEM name="Item 0">"buttonPressed","008006ED",00000001,0000000E,1773,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 1">"emergency_flag","008006EC",00000001,0000000E,1772,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 2">"emergency_counter","008006EB",00000001,0000000E,1771,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 3">"currentState","008006EE",00000001,0000000E,1774,1,-1,F3590002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 4">"temperature","008006D3",00000001,0000000E,1747,2,4,00000003,0,00000000,00000000</ITEM>
+     <ITEM name="Item 5">"currentState","00800092",00000002,0000000E,146,1,-1,ED020002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 6">"UART_Rdata","00800086",00000002,0000000E,134,2,4,00000003,0,00000000,00000000</ITEM>
+     <ITEM name="Item 7">"speed","00800084",00000002,0000000E,132,2,4,00000003,0,00000000,00000000</ITEM>
      <ITEM name="Name Column Width">156</ITEM>
      <ITEM name="ShowAddresses">Yes</ITEM>
      <ITEM name="ShowPreviousValues">No</ITEM>
      <ITEM name="ShowTypes">No</ITEM>
      <ITEM name="ShowWatchPoint">Yes</ITEM>
      <ITEM name="TriggerMode">0</ITEM>
-     <ITEM name="Value Column Width">82</ITEM>
+     <ITEM name="Value Column Width">159</ITEM>
      <ITEM name="Version">100</ITEM>
      <ITEM name="Watch Expression Column Width">82</ITEM>
-     <ITEM name="nItems">3</ITEM>
+     <ITEM name="nItems">8</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="695" x="181" flags="00000001" y="368" h="459" pid="0" iid="8">
+   <POPUP w="695" x="1503" flags="00000001" y="235" h="459" pid="0" iid="8">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="30" x="108" flags="00000008" y="220" h="16" pid="3" iid="1">
@@ -72,14 +83,14 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="20" x="929" flags="0000000a" y="644" h="32" pid="6" iid="1">
+   <POPUP w="8" x="508" flags="0000000b" y="205" h="13" pid="6" iid="1">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
      <ITEM name="DispFormat">2</ITEM>
      <ITEM name="ShowChanges">Yes</ITEM>
      <ITEM name="ShowToolTips">Yes</ITEM>
-     <ITEM name="TopLineAddress">00000000</ITEM>
+     <ITEM name="TopLineAddress">000002A8</ITEM>
     </PROPERTIES>
    </POPUP>
    <POPUP w="16" x="168" flags="0000000a" y="280" h="32" pid="7" iid="1">
@@ -125,7 +136,7 @@
    <POPUP w="802" x="73" flags="0000000a" y="401" h="400" pid="1" iid="1">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="721" x="106" flags="0000000a" y="277" h="660" pid="2" iid="1">
+   <POPUP w="721" x="23" flags="0000000a" y="292" h="660" pid="2" iid="1">
     <PROPERTIES>
      <ITEM name="Address Column Width">93</ITEM>
      <ITEM name="AutoResize">No</ITEM>
@@ -205,7 +216,7 @@
      <ITEM name="TopLineAddress">00000020</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="745" x="927" flags="0000000a" y="567" h="400" pid="1" iid="2">
+   <POPUP w="745" x="320" flags="0000000a" y="442" h="400" pid="1" iid="2">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="704" x="430" flags="0000000a" y="172" h="572" pid="2" iid="2">

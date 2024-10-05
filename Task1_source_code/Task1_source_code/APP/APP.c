@@ -206,32 +206,6 @@ void UART_Receive_Speed(uint8_t* Speed){
 }
 
 
-
-/*
-void pot(void *par){
-	static uint16_t pot_rd=0;
-	LCD_voidGoToXY(0,0);
-	LCD_voidWriteString((uint8_t *)"POT:");
-	while(1){
-		if (xSemaphoreTake(LCD_Semaphore, 5000) == pdTRUE)
-		{
-			LCD_voidGoToXY(0,4);
-			LCD_voidWriteString((uint8_t *)"    ");
-			pot_rd=ADC_Read(ADC_1);
-			LCD_voidGoToXY(0,4);
-			LCD_voidWriteNumber(pot_rd);
-			xSemaphoreGive(LCD_Semaphore);
-			vTaskDelay(200);
-		}
-		else{
-			
-		}
-		
-	}
-	
-}
-*/
-
 void tmp(void *par){
 	
 	while(1){
@@ -319,6 +293,7 @@ void emergency(void*par){
 						vTaskSuspend(xHanleFan1);
 						currentState=Emergency_state;
 						Speed_Scale=100;
+						UART_Transmit_State(temperature,temp_counter,&buttonPressed);
 						handle_State(temperature,DC_fan1,Speed_Scale,&currentState,&reset);
 						eeprom_write_byte (&EEPROM_State_Add, currentState);
 					}
@@ -334,6 +309,7 @@ void emergency(void*par){
 						emergency_counter=0;
 						emergency_flag=0;
 						currentState=Normal_state;
+						UART_Transmit_State(temperature,temp_counter,&buttonPressed);
 						handle_State(temperature,DC_fan1,Speed_Scale,&currentState,&reset);
 						eeprom_write_byte (&EEPROM_State_Add, currentState);
 						LED1_OFF();			
